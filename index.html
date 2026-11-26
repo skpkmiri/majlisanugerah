@@ -3,1065 +3,985 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majlis Anugerah Kecemerlangan & Graduasi - SK Pendidikan Khas Miri 2026</title>
+    <title>Majlis Anugerah Kecemerlangan & Graduasi SKPK Miri 2026</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Cinzel & Plus Jakarta Sans untuk gaya eksklusif anugerah -->
+    <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <script>
-        function applyTailwindConfig() {
-            if (typeof tailwind !== 'undefined') {
-                tailwind.config = {
-                    theme: {
-                        extend: {
-                            fontFamily: {
-                                sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                                serif: ['"Cinzel"', 'serif'],
-                            },
-                            colors: {
-                                royal: {
-                                    950: '#041029',
-                                    900: '#071b42',
-                                    800: '#0b2963',
-                                },
-                                gold: {
-                                    300: '#fde047',
-                                    400: '#facc15',
-                                    500: '#eab308',
-                                    600: '#ca8a04',
-                                }
-                            }
+        if (typeof tailwind !== 'undefined') {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            serifDisplay: ['Cinzel', 'serif'],
+                            sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        },
+                        colors: {
+                            royalBlue: '#051942',
+                            deepBlue: '#020b24',
+                            goldLight: '#FDE08D',
+                            goldMid: '#D4AF37',
+                            goldDark: '#AA771C',
                         }
                     }
-                };
+                }
             }
         }
-        applyTailwindConfig();
-        window.addEventListener('load', applyTailwindConfig);
     </script>
 
     <style>
-        /* Takrifan Warna Sandaran untuk Tema Biru Diraja & Emas */
-        .bg-royal-950 { background-color: #041029; }
-        .bg-royal-900 { background-color: #071b42; }
-        .bg-royal-800 { background-color: #0b2963; }
-        .from-royal-950 { --tw-gradient-from: #041029; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(4, 16, 41, 0)); }
-        .from-royal-900 { --tw-gradient-from: #071b42; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 27, 66, 0)); }
-        .via-royal-800 { --tw-gradient-stops: var(--tw-gradient-from), #0b2963, var(--tw-gradient-to, rgba(11, 41, 99, 0)); }
-        .to-royal-950 { --tw-gradient-to: #041029; }
-        .text-royal-950 { color: #041029; }
-        .font-serif { font-family: 'Cinzel', serif; }
-        .font-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
+        :root {
+            --royal-blue: #051942;
+            --deep-blue: #020b24;
+            --gold-light: #FDE08D;
+            --gold-mid: #D4AF37;
+            --gold-dark: #AA771C;
+        }
 
-        /* Gaya Khas untuk Tema Biru Diraja & Emas Mengikut latar.png */
         body {
-            background-color: #041029;
-            margin: 0;
-            padding: 0;
+            background-color: #020b24;
+            background-image: radial-gradient(circle at top center, #0c2b6b 0%, #020b24 85%);
+            min-height: 100vh;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
         }
 
-        /* Bekas Utama Aplikasi dengan Latar Belakang Poster */
-        .app-frame {
-            background-image: url('latar.png');
-            background-size: 100% 100%;
-            background-position: center top;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-            position: relative;
+        .poster-frame {
+            background-color: #051942;
+            background-image: url('latar.png'), linear-gradient(180deg, #061c49 0%, #09255e 45%, #041336 100%);
+            background-size: 100% auto, cover;
+            background-position: top center, center;
+            background-repeat: no-repeat, no-repeat;
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 30px rgba(212, 175, 55, 0.25);
         }
 
-        /* Pada skrin besar, paparkan dalam bingkai telefon/tablet elegan berpusat dengan latar ambient */
-        @media (min-width: 640px) {
-            body {
-                background: radial-gradient(circle at center, #0b2963 0%, #020817 100%);
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-                min-height: 100vh;
-                padding: 1.5rem 1rem;
-            }
-            .app-frame {
-                width: 100%;
-                max-width: 480px;
-                min-height: 920px;
-                border-radius: 28px;
-                box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(234, 179, 8, 0.25);
-                border: 2px solid rgba(250, 204, 21, 0.4);
-                overflow: hidden;
-            }
-        }
-
-        /* Butang Emas Metalik Mewah */
-        .btn-gold-royal {
-            background: linear-gradient(135deg, rgba(11, 41, 99, 0.88) 0%, rgba(4, 16, 41, 0.94) 100%);
-            border: 1.5px solid rgba(250, 204, 21, 0.65);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(254, 240, 138, 0.35);
-            backdrop-filter: blur(8px);
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        .gold-btn {
+            background: linear-gradient(135deg, rgba(8, 30, 78, 0.92) 0%, rgba(4, 17, 48, 0.96) 100%);
+            border: 1.5px solid #D4AF37;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(253, 224, 141, 0.35);
+            transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
             position: relative;
             overflow: hidden;
         }
 
-        .btn-gold-royal::before {
+        .gold-btn::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
-            width: 50%;
+            width: 55%;
             height: 100%;
-            background: linear-gradient(to right, transparent, rgba(254, 240, 138, 0.22), transparent);
+            background: linear-gradient(90deg, transparent, rgba(253, 224, 141, 0.2), transparent);
             transform: skewX(-25deg);
             transition: left 0.6s ease;
         }
 
-        .btn-gold-royal:hover::before {
+        .gold-btn:hover::before {
             left: 150%;
         }
 
-        .btn-gold-royal:hover {
-            border-color: #fde047;
+        .gold-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 22px rgba(234, 179, 8, 0.35), inset 0 1px 2px rgba(254, 240, 138, 0.6);
-            background: linear-gradient(135deg, rgba(19, 63, 145, 0.92) 0%, rgba(7, 27, 66, 0.96) 100%);
+            border-color: #FDE08D;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35), inset 0 1px 2px rgba(253, 224, 141, 0.6);
+            background: linear-gradient(135deg, rgba(14, 46, 114, 0.96) 0%, rgba(6, 23, 64, 0.98) 100%);
         }
 
-        .btn-gold-royal:active {
+        .gold-btn:active {
             transform: scale(0.98);
         }
 
-        /* Lencana Ikon Bulat Emas */
-        .icon-badge {
-            background: linear-gradient(135deg, #fef08a 0%, #eab308 50%, #a16207 100%);
-            color: #041029;
-            box-shadow: 0 2px 8px rgba(234, 179, 8, 0.5);
+        .gold-icon-badge {
+            background: linear-gradient(135deg, #FDE08D 0%, #D4AF37 50%, #AA771C 100%);
+            color: #041336;
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
         }
 
-        /* Panel Statistik Pelawat */
-        .visitor-glass {
-            background: linear-gradient(90deg, rgba(4, 16, 41, 0.85) 0%, rgba(11, 41, 99, 0.85) 50%, rgba(4, 16, 41, 0.85) 100%);
-            border: 1px solid rgba(250, 204, 21, 0.5);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        .gold-text-gradient {
+            background: linear-gradient(to bottom, #FFF3C4 0%, #FDE08D 40%, #D4AF37 80%, #B38222 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .visitor-pill {
+            background: rgba(3, 14, 40, 0.85);
             backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 175, 55, 0.55);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
-        /* Animasi Modal */
-        @keyframes modalFadeIn {
-            from { opacity: 0; transform: translateY(16px) scale(0.97); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        .animate-modal {
-            animation: modalFadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        .modal-backdrop {
+            background: rgba(2, 8, 26, 0.85);
+            backdrop-filter: blur(6px);
         }
 
-        /* Skrol Halus dalam Modal */
         .custom-scroll::-webkit-scrollbar {
             width: 5px;
         }
         .custom-scroll::-webkit-scrollbar-track {
-            background: rgba(4, 16, 41, 0.5);
+            background: rgba(5, 25, 66, 0.4);
+            border-radius: 10px;
         }
         .custom-scroll::-webkit-scrollbar-thumb {
-            background: rgba(234, 179, 8, 0.6);
+            background: #D4AF37;
             border-radius: 10px;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            animation: fadeUp 0.35s ease forwards;
         }
     </style>
 </head>
-<body class="text-white antialiased selection:bg-yellow-400 selection:text-royal-950">
+<body class="text-white antialiased selection:bg-[#D4AF37] selection:text-[#020b24]">
 
-    <!-- Bingkai Utama Aplikasi -->
-    <main class="app-frame flex flex-col justify-start px-4 sm:px-6 pb-32">
-        
-        <!-- Ruang Kosong Atas untuk Memelihara Grafik Tajuk Poster (latar.png) serta Kotak Tarikh & Lokasi -->
-        <div class="w-full pt-[61%] sm:pt-[63%] pointer-events-none select-none">
-            <!-- Header poster (Logo Sekolah, Tajuk Majlis, Tarikh Rabu 02.12.2026 & Lokasi) dipaparkan jelas di sini -->
-        </div>
-
-        <!-- Bahagian Interaktif Tengah: Statistik Pelawat & Butang Menu -->
-        <div class="w-full z-10 space-y-2">
+    <!-- Bekas Utama Aplikasi -->
+    <div class="min-h-screen w-full flex justify-center items-start sm:py-4 px-0 sm:px-4">
+        <div class="poster-frame relative w-full max-w-[480px] min-h-screen sm:min-h-[880px] sm:rounded-3xl border-x sm:border border-[#D4AF37]/40 flex flex-col justify-between overflow-hidden">
             
-            <!-- 1. Kaunter Jumlah Pelawat (Saiz Dikecilkan & Padat) -->
-            <section aria-label="Statistik Pelawat" class="visitor-glass rounded-full py-1.5 px-4 flex items-center justify-between max-w-xs mx-auto">
-                <div class="flex items-center space-x-1.5">
-                    <i class="fa-solid fa-user-clock text-[10px] text-yellow-300"></i>
-                    <span class="text-[9px] uppercase tracking-wider text-yellow-200/80 font-medium">Hari Ini:</span>
-                    <span id="visitor-today" class="text-xs font-bold text-white font-serif">1</span>
+            <!-- Lapisan Pencahayaan Halus -->
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-[#051942]/30 to-[#020b24]/75 z-0"></div>
+
+            <!-- Ruang Poster Atas + Paparan Pelawat + Menu -->
+            <div class="relative z-10 w-full flex flex-col items-center px-4 pt-[61%] sm:pt-[63%] pb-28">
+                
+                <!-- 1. STATISTIK PELAWAT (Saiz Kecil & Kemas) -->
+                <div class="visitor-pill rounded-full px-3.5 py-1 mb-2.5 flex items-center justify-center gap-3 text-[10px] sm:text-[11px] tracking-wide">
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-user-check text-[#FDE08D] text-[10px]"></i>
+                        <span class="text-blue-200 font-medium">HARI INI:</span>
+                        <span id="visitor-today" class="font-extrabold text-[#FDE08D]">1</span>
+                    </div>
+                    <span class="text-[#D4AF37]/40">|</span>
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-users text-[#FDE08D] text-[10px]"></i>
+                        <span class="text-blue-200 font-medium">JUMLAH:</span>
+                        <span id="visitor-total" class="font-extrabold text-[#FDE08D]">1</span>
+                    </div>
                 </div>
 
-                <div class="h-3.5 w-[1px] bg-yellow-400/40"></div>
+                <!-- 2. SENARAI MENU DINAMIK -->
+                <main id="dynamic-menu-container" class="w-full space-y-2.5 animate-fade-up">
+                    <!-- Butang menu dijana secara automatik oleh JavaScript -->
+                </main>
 
-                <div class="flex items-center space-x-1.5">
-                    <i class="fa-solid fa-users text-[10px] text-yellow-300"></i>
-                    <span class="text-[9px] uppercase tracking-wider text-yellow-200/80 font-medium">Jumlah:</span>
-                    <span id="visitor-total" class="text-xs font-bold text-yellow-300 font-serif">1</span>
+                <!-- Butang Akses Panel Admin -->
+                <div class="mt-5 flex justify-center">
+                    <button onclick="openAdminLogin()" class="px-3.5 py-1.5 rounded-full bg-[#020b24]/80 hover:bg-[#051942] border border-[#D4AF37]/40 hover:border-[#FDE08D] text-[11px] font-semibold text-[#FDE08D]/85 hover:text-[#FDE08D] flex items-center gap-1.5 transition shadow-lg">
+                        <i class="fa-solid fa-gear text-[10px]"></i>
+                        <span>Panel Admin</span>
+                    </button>
                 </div>
-            </section>
+            </div>
 
-            <!-- Senarai Butang Menu Utama (Dijana secara dinamik supaya Admin boleh susun atur & tambah menu) -->
-            <nav id="dynamic-menu-container" aria-label="Menu Utama Majlis" class="grid grid-cols-1 gap-1.5">
-                <!-- Butang menu dirender oleh JavaScript -->
-            </nav>
-
-            <!-- Butang Akses Admin Halus di Bawah Menu -->
-            <div class="pt-0.5 flex justify-center">
-                <button onclick="openAdminGate()" class="text-[10px] text-yellow-200/60 hover:text-yellow-300 bg-royal-950/70 hover:bg-royal-900 border border-yellow-400/25 px-3 py-1 rounded-full flex items-center space-x-1.5 transition backdrop-blur-sm">
-                    <i class="fa-solid fa-gear text-[9px]"></i>
-                    <span>Panel Admin</span>
-                </button>
+            <!-- Bahagian Bawah Poster (Trofi & Graduasi) -->
+            <div class="relative z-10 mt-auto w-full h-24 pointer-events-none flex items-end justify-center pb-2">
+                <div class="px-3 py-1 rounded-full bg-[#020b24]/75 backdrop-blur-sm border border-[#D4AF37]/30 text-[10px] text-[#FDE08D]/90 tracking-wider uppercase font-semibold">
+                    SK Pendidikan Khas Miri • 2026
+                </div>
             </div>
         </div>
-    </main>
+    </div>
 
-    <!-- MODAL PAPARAN KANDUNGAN MENU -->
-    <div id="content-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5">
-        <div class="animate-modal bg-gradient-to-b from-royal-900 to-royal-950 border-2 border-yellow-400/70 rounded-2xl w-full max-w-lg max-h-[88vh] flex flex-col shadow-2xl overflow-hidden">
-            
+    <!-- ==================== MODAL PAPARAN KANDUNGAN ==================== -->
+    <div id="contentModal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-3 sm:p-5">
+        <div class="bg-gradient-to-b from-[#082054] to-[#030e29] border-2 border-[#D4AF37] rounded-2xl w-full max-w-md max-h-[88vh] flex flex-col shadow-2xl overflow-hidden animate-fade-up">
             <!-- Header Modal -->
-            <div class="px-5 py-4 bg-gradient-to-r from-royal-950 via-royal-800 to-royal-950 border-b border-yellow-400/40 flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div id="modal-icon" class="icon-badge w-9 h-9 rounded-lg flex items-center justify-center">
+            <div class="px-4 py-3.5 bg-[#041233] border-b border-[#D4AF37]/40 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <div id="modalIconBox" class="gold-icon-badge w-8 h-8 rounded-lg flex items-center justify-center text-sm shrink-0">
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <div>
-                        <h2 id="modal-title" class="font-serif text-base sm:text-lg font-bold text-yellow-300 tracking-wide">TAJUK MENU</h2>
-                        <p id="modal-subtitle" class="text-[11px] text-blue-200">SK Pendidikan Khas Miri • 2 Disember 2026</p>
+                        <h2 id="modalTitle" class="font-bold text-sm sm:text-base text-[#FDE08D] uppercase tracking-wide leading-tight">Tajuk Menu</h2>
+                        <p id="modalSubtitle" class="text-[11px] text-blue-200/80">SK Pendidikan Khas Miri 2026</p>
                     </div>
                 </div>
-                <button onclick="closeModal()" aria-label="Tutup" class="w-8 h-8 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-royal-950 text-yellow-200 flex items-center justify-center transition-colors">
+                <button onclick="closeModal('contentModal')" class="w-8 h-8 rounded-full bg-white/10 hover:bg-red-500/80 text-white flex items-center justify-center transition">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
-            <!-- Isi Kandungan Modal -->
-            <div id="modal-body" class="p-5 overflow-y-auto custom-scroll space-y-4 text-sm text-blue-50">
-                <!-- Kandungan dinamik dimuatkan melalui JavaScript -->
+            <!-- Badan Modal -->
+            <div id="modalBody" class="p-4 overflow-y-auto custom-scroll space-y-3 text-sm text-blue-50">
+                <!-- Kandungan dimuatkan secara dinamik -->
             </div>
 
             <!-- Footer Modal -->
-            <div class="px-5 py-3 bg-royal-950/90 border-t border-yellow-400/30 flex items-center justify-between">
-                <button onclick="shareCurrentSection()" class="text-xs text-yellow-300 hover:text-yellow-200 flex items-center space-x-1.5 py-1.5 px-3 rounded-lg border border-yellow-400/40 hover:bg-yellow-400/10 transition">
-                    <i class="fa-solid fa-share-nodes"></i>
-                    <span>Kongsi Pautan</span>
-                </button>
-                <button onclick="closeModal()" class="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-royal-950 font-bold text-xs px-5 py-2 rounded-lg shadow-md transition">
-                    Tutup Paparan
+            <div class="px-4 py-2.5 bg-[#041233] border-t border-[#D4AF37]/30 flex justify-end">
+                <button onclick="closeModal('contentModal')" class="px-4 py-1.5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#AA771C] text-[#020b24] font-bold text-xs uppercase tracking-wider hover:brightness-110 transition">
+                    Tutup
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- MODAL PANEL ADMIN -->
-    <div id="admin-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-5">
-        <div class="animate-modal bg-gradient-to-b from-royal-900 to-royal-950 border-2 border-yellow-400 rounded-2xl w-full max-w-lg max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
-            
-            <!-- Header Admin -->
-            <div class="px-5 py-3.5 bg-royal-950 border-b border-yellow-400/50 flex items-center justify-between">
-                <div class="flex items-center space-x-2.5">
-                    <div class="icon-badge w-8 h-8 rounded-lg flex items-center justify-center">
-                        <i class="fa-solid fa-user-shield text-xs"></i>
+    <!-- ==================== MODAL LOG MASUK ADMIN ==================== -->
+    <div id="adminLoginModal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4">
+        <div class="bg-gradient-to-b from-[#082054] to-[#030e29] border-2 border-[#D4AF37] rounded-2xl w-full max-w-xs p-5 shadow-2xl animate-fade-up">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-2">
+                    <div class="gold-icon-badge w-8 h-8 rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-bold text-sm text-[#FDE08D] uppercase tracking-wide">Akses Admin</h3>
+                </div>
+                <button onclick="closeModal('adminLoginModal')" class="w-7 h-7 rounded-full bg-white/10 hover:bg-red-500/80 text-white flex items-center justify-center text-xs">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <form onsubmit="handleAdminLogin(event)" class="space-y-3">
+                <div>
+                    <label class="block text-[11px] font-semibold text-blue-200 uppercase mb-1">Kata Laluan Pentadbir</label>
+                    <input type="password" id="adminPasswordInput" required placeholder="Masukkan kata laluan" class="w-full px-3 py-2 rounded-xl bg-[#020b24] border border-[#D4AF37]/50 focus:border-[#FDE08D] focus:outline-none text-sm text-white">
+                </div>
+                <p id="adminLoginError" class="hidden text-xs text-red-400 font-medium">Kata laluan tidak sah. Sila cuba lagi.</p>
+                <button type="submit" class="w-full py-2 rounded-xl bg-gradient-to-r from-[#FDE08D] via-[#D4AF37] to-[#AA771C] text-[#020b24] font-extrabold text-xs uppercase tracking-wider hover:brightness-110 transition shadow-lg">
+                    Log Masuk
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL PANEL ADMIN PENUH ==================== -->
+    <div id="adminPanelModal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-2 sm:p-4">
+        <div class="bg-gradient-to-b from-[#082054] to-[#030e29] border-2 border-[#D4AF37] rounded-2xl w-full max-w-lg max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-fade-up">
+            <!-- Header Panel Admin -->
+            <div class="px-4 py-3 bg-[#041233] border-b border-[#D4AF37]/40 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <div class="gold-icon-badge w-8 h-8 rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-sliders"></i>
                     </div>
                     <div>
-                        <h2 class="font-serif text-sm sm:text-base font-bold text-yellow-300">PANEL PENGURUSAN ADMIN</h2>
-                        <p class="text-[10px] text-blue-200">Urus Pautan, Tambah & Susun Atur Menu</p>
+                        <h2 class="font-bold text-sm text-[#FDE08D] uppercase tracking-wide">Panel Pengurusan Admin</h2>
+                        <p class="text-[10px] text-emerald-300 flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span>
+                            Disegerakkan secara langsung (Firebase)
+                        </p>
                     </div>
                 </div>
-                <button onclick="closeAdminModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-royal-950 text-yellow-200 flex items-center justify-center transition">
+                <button onclick="closeModal('adminPanelModal')" class="w-8 h-8 rounded-full bg-white/10 hover:bg-red-500/80 text-white flex items-center justify-center">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
-            <!-- Skrin Log Masuk Admin -->
-            <div id="admin-login-view" class="p-6 space-y-4 text-center">
-                <div class="w-12 h-12 rounded-full bg-yellow-400/15 border border-yellow-400/50 text-yellow-300 flex items-center justify-center mx-auto text-lg">
-                    <i class="fa-solid fa-lock"></i>
-                </div>
-                <div>
-                    <h3 class="font-bold text-yellow-200 text-sm">Pengesahan Pentadbir</h3>
-                    <p class="text-xs text-blue-200/80 mt-1">Masukkan kata laluan admin untuk mengurus pautan dan susunan tab menu.</p>
-                </div>
-                <div class="max-w-xs mx-auto space-y-2.5">
-                    <input type="password" id="admin-password-input" placeholder="Masukkan kata laluan..." class="w-full bg-royal-950 border border-yellow-400/50 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-yellow-300 text-center" onkeydown="if(event.key==='Enter') verifyAdminLogin()">
-                    <button onclick="verifyAdminLogin()" class="w-full bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold text-xs py-2.5 rounded-xl transition">
-                        Log Masuk Admin
-                    </button>
-                </div>
-            </div>
-
-            <!-- Skrin Kawalan Admin (Selepas Log Masuk) -->
-            <div id="admin-dashboard-view" class="hidden p-4 overflow-y-auto custom-scroll space-y-5 text-xs">
-                
-                <!-- Bahagian A: Tambah Tab Menu Baharu -->
-                <div class="bg-royal-800/40 border border-yellow-400/40 rounded-xl p-3.5 space-y-2.5">
-                    <h3 class="font-bold text-yellow-300 flex items-center space-x-1.5">
-                        <i class="fa-solid fa-plus-circle"></i>
-                        <span>1. Tambah Tab Menu Baharu</span>
-                    </h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        <input type="text" id="new-menu-title" placeholder="Nama Menu (cth: E-SIJIL)" class="bg-royal-950 border border-yellow-400/40 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-yellow-300">
-                        <input type="text" id="new-menu-subtitle" placeholder="Keterangan ringkas..." class="bg-royal-950 border border-yellow-400/40 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-yellow-300">
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                        <select id="new-menu-icon" class="bg-royal-950 border border-yellow-400/40 rounded-lg px-2.5 py-2 text-yellow-200 focus:outline-none">
-                            <option value="fa-link">Ikon Pautan</option>
-                            <option value="fa-certificate">Ikon Sijil</option>
-                            <option value="fa-video">Ikon Video</option>
-                            <option value="fa-file-lines">Ikon Dokumen</option>
-                            <option value="fa-bullhorn">Ikon Hebahan</option>
-                            <option value="fa-star">Ikon Bintang</option>
-                        </select>
-                        <input type="url" id="new-menu-url" placeholder="https://pautan-anda.com" class="sm:col-span-2 bg-royal-950 border border-yellow-400/40 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-yellow-300">
-                    </div>
-                    <button onclick="adminAddMenuTab()" class="w-full bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold py-2 rounded-lg transition">
-                        + Tambah Ke Senarai Menu
-                    </button>
-                </div>
-
-                <!-- Bahagian B: Susun Atur Tab Menu & Kemaskini Pautan -->
-                <div class="space-y-2">
-                    <div class="flex items-center justify-between">
-                        <h3 class="font-bold text-yellow-300 flex items-center space-x-1.5">
-                            <i class="fa-solid fa-arrows-up-down-left-right"></i>
-                            <span>2. Susun Atur Menu & Pautan</span>
-                        </h3>
-                        <span class="text-[10px] text-blue-200">Guna anak panah untuk ubah susunan</span>
-                    </div>
-                    <div id="admin-menu-list" class="space-y-2">
-                        <!-- Senarai menu untuk diurus oleh Admin -->
-                    </div>
-                </div>
-
-                <!-- Bahagian C: Kemaskini Pautan Sub-Menu (Galeri & Slaid Anugerah) -->
-                <div class="bg-royal-800/40 border border-yellow-400/40 rounded-xl p-3.5 space-y-2.5">
-                    <h3 class="font-bold text-yellow-300 flex items-center space-x-1.5">
-                        <i class="fa-solid fa-folder-tree"></i>
-                        <span>3. Pautan Sub-Menu (Galeri & Slaid)</span>
-                    </h3>
-                    <div id="admin-sublinks-list" class="space-y-2">
-                        <!-- Senarai pautan sub-menu -->
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="px-5 py-3 bg-royal-950 border-t border-yellow-400/30 flex justify-end">
-                <button onclick="closeAdminModal()" class="bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold text-xs px-5 py-2 rounded-lg">
-                    Selesai & Simpan
+            <!-- Tab Navigasi Admin -->
+            <div class="grid grid-cols-3 bg-[#020b24] border-b border-[#D4AF37]/30 text-[11px] font-bold uppercase">
+                <button onclick="switchAdminTab('links')" id="tabBtn-links" class="py-2.5 text-[#FDE08D] border-b-2 border-[#FDE08D] bg-[#082054]/60">
+                    <i class="fa-solid fa-link mr-1"></i> Pautan Menu
                 </button>
+                <button onclick="switchAdminTab('add')" id="tabBtn-add" class="py-2.5 text-blue-200/70 hover:text-white border-b-2 border-transparent">
+                    <i class="fa-solid fa-plus-circle mr-1"></i> Tambah Tab
+                </button>
+                <button onclick="switchAdminTab('order')" id="tabBtn-order" class="py-2.5 text-blue-200/70 hover:text-white border-b-2 border-transparent">
+                    <i class="fa-solid fa-sort mr-1"></i> Susun Tab
+                </button>
+            </div>
+
+            <!-- Kandungan Tab Admin -->
+            <div class="p-4 overflow-y-auto custom-scroll flex-1 space-y-4">
+                
+                <!-- TAB 1: KEMASKINI PAUTAN MENU & SUB-MENU -->
+                <div id="adminTab-links" class="space-y-4">
+                    <div>
+                        <h4 class="text-xs font-bold text-[#FDE08D] uppercase mb-2 border-b border-[#D4AF37]/30 pb-1">Pautan Menu Utama</h4>
+                        <div id="adminMainLinksList" class="space-y-2.5"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-[#FDE08D] uppercase mb-2 border-b border-[#D4AF37]/30 pb-1">Pautan Sub-Menu Galeri</h4>
+                        <div id="adminGalleryLinksList" class="space-y-2.5"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-[#FDE08D] uppercase mb-2 border-b border-[#D4AF37]/30 pb-1">Pautan Sub-Menu Slide Penerima Anugerah</h4>
+                        <div id="adminSlideLinksList" class="space-y-2.5"></div>
+                    </div>
+                    <button onclick="saveAllAdminLinks()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-[#FDE08D] via-[#D4AF37] to-[#AA771C] text-[#020b24] font-extrabold text-xs uppercase tracking-wider hover:brightness-110 transition shadow-lg">
+                        <i class="fa-solid fa-floppy-disk mr-1"></i> Simpan Semua Pautan
+                    </button>
+                </div>
+
+                <!-- TAB 2: TAMBAH TAB MENU BAHARU -->
+                <div id="adminTab-add" class="hidden space-y-3">
+                    <form onsubmit="handleAddNewMenuTab(event)" class="space-y-3 bg-[#020b24]/60 p-3.5 rounded-xl border border-[#D4AF37]/30">
+                        <div>
+                            <label class="block text-[11px] font-semibold text-[#FDE08D] uppercase mb-1">Nama Tab Menu</label>
+                            <input type="text" id="newTabTitle" required placeholder="Contoh: SIARAN LANGSUNG YOUTUBE" class="w-full px-3 py-2 rounded-xl bg-[#041233] border border-[#D4AF37]/40 text-xs text-white focus:border-[#FDE08D] focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-semibold text-[#FDE08D] uppercase mb-1">Keterangan Ringkas</label>
+                            <input type="text" id="newTabSubtitle" required placeholder="Contoh: Tonton Majlis Secara Langsung" class="w-full px-3 py-2 rounded-xl bg-[#041233] border border-[#D4AF37]/40 text-xs text-white focus:border-[#FDE08D] focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-semibold text-[#FDE08D] uppercase mb-1">Pautan URL (Kosongkan jika papar info dalaman)</label>
+                            <input type="url" id="newTabUrl" placeholder="https://..." class="w-full px-3 py-2 rounded-xl bg-[#041233] border border-[#D4AF37]/40 text-xs text-white focus:border-[#FDE08D] focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-semibold text-[#FDE08D] uppercase mb-1">Pilih Ikon</label>
+                            <select id="newTabIcon" class="w-full px-3 py-2 rounded-xl bg-[#041233] border border-[#D4AF37]/40 text-xs text-white focus:border-[#FDE08D] focus:outline-none">
+                                <option value="fa-star">Bintang (Anugerah)</option>
+                                <option value="fa-video">Video / Siaran Langsung</option>
+                                <option value="fa-file-pdf">Dokumen / PDF</option>
+                                <option value="fa-camera">Kamera / Gambar</option>
+                                <option value="fa-clipboard-check">Borang / Pendaftaran</option>
+                                <option value="fa-bullhorn">Pengumuman</option>
+                                <option value="fa-link">Pautan Luar</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-[#FDE08D] via-[#D4AF37] to-[#AA771C] text-[#020b24] font-extrabold text-xs uppercase tracking-wider hover:brightness-110 transition">
+                            <i class="fa-solid fa-plus mr-1"></i> Tambah Tab Menu
+                        </button>
+                    </form>
+                </div>
+
+                <!-- TAB 3: SUSUN ATUR KEDUDUKAN TAB MENU -->
+                <div id="adminTab-order" class="hidden space-y-2.5">
+                    <p class="text-[11px] text-blue-200">Gunakan butang anak panah untuk menaikkan atau menurunkan kedudukan tab menu.</p>
+                    <div id="adminOrderList" class="space-y-2"></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Notifikasi Toast (Pengganti alert) -->
-    <div id="toast-box" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[60] hidden bg-royal-950 border border-yellow-400 text-yellow-200 px-4 py-2.5 rounded-full shadow-xl text-xs font-medium flex items-center space-x-2">
-        <i class="fa-solid fa-circle-check text-yellow-400"></i>
-        <span id="toast-msg">Pautan berjaya disalin!</span>
+    <!-- Notifikasi Toast -->
+    <div id="toastNotification" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[60] hidden px-4 py-2 rounded-full bg-[#041233] border border-[#FDE08D] text-[#FDE08D] text-xs font-bold shadow-2xl items-center gap-2">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toastMessage">Berjaya disimpan!</span>
     </div>
 
-    <script>
-        // ==========================================
-        // 1. PENGURUSAN STATISTIK PELAWAT (DIRESET)
-        // ==========================================
-        function initVisitorCounter() {
-            const baseToday = 0;
-            const baseTotal = 0;
+    <!-- ==================== SKRIP UTAMA & FIREBASE ==================== -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, setDoc, updateDoc, onSnapshot, increment, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-            const todayEl = document.getElementById('visitor-today');
-            const totalEl = document.getElementById('visitor-total');
-
-            animateNumber(todayEl, 0, baseToday + 1, 500);
-            animateNumber(totalEl, 0, baseTotal + 1, 500);
-        }
-
-        function animateNumber(element, start, end, duration) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                const current = Math.floor(progress * (end - start) + start);
-                element.textContent = current.toLocaleString('ms-MY');
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            };
-            window.requestAnimationFrame(step);
-        }
-
-        // ==========================================
-        // 2. STRUKTUR MENU UTAMA & PAUTAN (BOLEH DIURUS ADMIN)
-        // ==========================================
-        let menuTabs = [
-            { id: 'tentatif', title: 'TENTATIF', subtitle: 'Atur Cara Rasmi Majlis', icon: 'fa-clock', url: '', isCustom: false },
-            { id: 'buku_program', title: 'BUKU PROGRAM', subtitle: 'E-Buku Program & Jawatankuasa', icon: 'fa-book-open', url: '', isCustom: false },
-            { id: 'kehadiran', title: 'KEHADIRAN', subtitle: 'Pendaftaran Kehadiran Tetamu & Ibu Bapa', icon: 'fa-clipboard-user', url: 'https://skpkmiri.github.io/PIBG/', isCustom: false },
-            { id: 'frame_majlis', title: 'FRAME MAJLIS', subtitle: 'Bingkai Foto Digital Twibbon Majlis', icon: 'fa-camera', url: 'https://twb.nz/majlis-apc-sekolah', isCustom: false },
-            { id: 'galeri', title: 'GALERI', subtitle: 'Album Majlis, Photobooth, Graduasi & Studio', icon: 'fa-images', url: '', isCustom: false },
-            { id: 'slaid_anugerah', title: 'SLIDE PENERIMA ANUGERAH', subtitle: 'Kurikulum, HEM, Kokurikulum, PIBG & Tokoh', icon: 'fa-trophy', url: '', isCustom: false },
-            { id: 'penghargaan', title: 'PENGHARGAAN', subtitle: 'Sekalung Budi & Terima Kasih', icon: 'fa-hand-holding-heart', url: '', isCustom: false }
-        ];
-
-        // Pautan khusus untuk item sub-menu Galeri & Slaid Penerima Anugerah
-        let subMenuLinks = {
-            // Galeri
-            album_majlis: { label: 'Galeri: 1. Album Majlis', url: 'https://photos.app.goo.gl/U7qQUcQR8EcstJdd6' },
-            album_photobooth: { label: 'Galeri: 2. Album Photobooth', url: 'https://photos.app.goo.gl/x9YuQfUQ3AAQVzvS7' },
-            album_graduasi_thn6: { label: 'Galeri: 3a. Album Graduasi (Tahun 6)', url: 'https://photos.app.goo.gl/zu3pm44nLHWjeTxS6' },
-            album_graduasi_pra: { label: 'Galeri: 3b. Album Graduasi (Prasekolah)', url: 'https://photos.app.goo.gl/5vUcoShk7XbTBjNP8' },
-            album_studio: { label: 'Galeri: 4. Album Studio', url: 'https://photos.app.goo.gl/Yo2iDwnTcYEw3NyW8' },
-            // Slide Penerima Anugerah
-            anugerah_kurikulum: { label: 'Slaid: 1. Anugerah Kurikulum', url: 'https://canva.link/qppqgd3ig0uc5p2' },
-            anugerah_hem: { label: 'Slaid: 2. Anugerah Hal Ehwal Murid', url: 'https://canva.link/3q649ti0oi9wcug' },
-            anugerah_kokurikulum: { label: 'Slaid: 3. Anugerah Kokurikulum', url: 'https://canva.link/u3wku9v5pichaxh' },
-            insentif_pibg: { label: 'Slaid: 4. Penerima Insentif PIBG', url: 'https://canva.link/mt1aulij9qwyy3z' },
-            tokoh_koku_lelaki: { label: 'Slaid: 5a. Tokoh Kokurikulum (Lelaki)', url: '' },
-            tokoh_koku_perempuan: { label: 'Slaid: 5b. Tokoh Kokurikulum (Perempuan)', url: '' },
-            tokoh_murid: { label: 'Slaid: 6. Tokoh Murid', url: '' }
+        // Konfigurasi Firebase Projek Rasmi: majlisanugerah
+        const firebaseConfig = {
+            apiKey: "AIzaSyDD4y1UdSi5WtBSNp9IviEvSzc4d6jnG6A",
+            authDomain: "majlisanugerah.firebaseapp.com",
+            projectId: "majlisanugerah",
+            storageBucket: "majlisanugerah.firebasestorage.app",
+            messagingSenderId: "986572070997",
+            appId: "1:986572070997:web:74cca60e1ec547ecc734dc",
+            measurementId: "G-6QDRVH7C1W"
         };
 
-        // Render Butang Menu Utama pada Aplikasi
-        function renderMainMenu() {
-            const container = document.getElementById('dynamic-menu-container');
-            container.innerHTML = menuTabs.map(tab => `
-                <button onclick="openSection('${tab.id}')" class="btn-gold-royal w-full rounded-xl px-3.5 py-2.5 flex items-center justify-between group text-left">
-                    <div class="flex items-center space-x-3">
-                        <span class="icon-badge w-8 h-8 rounded-lg flex items-center justify-center shrink-0">
-                            <i class="fa-solid ${tab.icon} text-xs"></i>
-                        </span>
-                        <div>
-                            <span class="block text-xs sm:text-sm font-bold tracking-wide text-yellow-100 group-hover:text-yellow-300 transition-colors">${tab.title}</span>
-                            <span class="block text-[10px] text-blue-200/80">${tab.subtitle}</span>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-right text-yellow-400/70 group-hover:text-yellow-300 group-hover:translate-x-1 transition-all text-xs"></i>
-                </button>
-            `).join('');
-        }
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const appId = 'majlisanugerah-skpkmiri-2026';
 
-        // ==========================================
-        // 3. KANDUNGAN TERPERINCI SETIAP MENU
-        // ==========================================
-        function getSectionContent(tab) {
-            // Helper butang pautan luar jika admin telah menetapkan URL
-            const externalLinkBanner = (url, btnText = 'Buka Pautan Rasmi') => {
-                if (!url) return '';
-                return `
-                    <div class="bg-yellow-400/15 border border-yellow-400 rounded-xl p-3 flex items-center justify-between mb-3">
-                        <span class="text-xs font-semibold text-yellow-200"><i class="fa-solid fa-link mr-1.5"></i>Pautan Tersedia</span>
-                        <a href="${url}" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold text-xs px-3.5 py-1.5 rounded-lg transition flex items-center space-x-1">
-                            <span>${btnText}</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </a>
-                    </div>
-                `;
-            };
-
-            switch (tab.id) {
-                case 'tentatif':
-                    return {
-                        title: 'TENTATIF MAJLIS',
-                        subtitle: 'Rabu, 02 Disember 2026 • Dewan SK Pendidikan Khas Miri',
-                        icon: tab.icon,
-                        html: `
-                            ${externalLinkBanner(tab.url, 'Muat Turun Tentatif')}
-                            <div class="space-y-2.5">
-                                <div class="bg-royal-800/50 border-l-4 border-yellow-400 p-3 rounded-r-xl">
-                                    <span class="text-xs font-bold text-yellow-300">7:30 Pagi</span>
-                                    <p class="font-semibold text-white">Ketibaan Murid, Ibu Bapa & Para Jemputan</p>
-                                    <p class="text-xs text-blue-200/80 mt-0.5">Pendaftaran kehadiran dan sesi bergambar di Photobooth.</p>
-                                </div>
-                                <div class="bg-royal-800/50 border-l-4 border-yellow-400 p-3 rounded-r-xl">
-                                    <span class="text-xs font-bold text-yellow-300">8:15 Pagi</span>
-                                    <p class="font-semibold text-white">Ketibaan Tetamu Kehormat & Perarakan Masuk Graduan</p>
-                                    <p class="text-xs text-blue-200/80 mt-0.5">Perarakan graduan Prasekolah & Tahun 6.</p>
-                                </div>
-                                <div class="bg-royal-800/50 border-l-4 border-yellow-400 p-3 rounded-r-xl">
-                                    <span class="text-xs font-bold text-yellow-300">8:45 Pagi</span>
-                                    <p class="font-semibold text-white">Nyanyian Lagu Negaraku, Ibu Pertiwiku & Lagu Sekolah</p>
-                                    <p class="text-xs text-blue-200/80 mt-0.5">Bacaan Doa Pembukaan Majlis.</p>
-                                </div>
-                                <div class="bg-royal-800/50 border-l-4 border-yellow-400 p-3 rounded-r-xl">
-                                    <span class="text-xs font-bold text-yellow-300">9:15 Pagi</span>
-                                    <p class="font-semibold text-white">Ucapan Alu-Aluan Guru Besar & Ucapan Perasmian</p>
-                                    <p class="text-xs text-blue-200/80 mt-0.5">Gimik Perasmian Majlis Anugerah Kecemerlangan & Graduasi 2026.</p>
-                                </div>
-                                <div class="bg-royal-800/50 border-l-4 border-yellow-400 p-3 rounded-r-xl">
-                                    <span class="text-xs font-bold text-yellow-300">10:00 Pagi</span>
-                                    <p class="font-semibold text-white">Penyampaian Sijil Graduasi Prasekolah & Tahun 6</p>
-                                    <p class="text-xs text-blue-200/80 mt-0.5">Diselang-seli dengan persembahan murid SKPK Miri.</p>
-                                </div>
-                                <div class="bg-royal-800/50 border-l-4 border-yellow-400 p-3 rounded-r-xl">
-                                    <span class="text-xs font-bold text-yellow-300">11:00 Pagi</span>
-                                    <p class="font-semibold text-white">Penyampaian Anugerah Kurikulum, HEM, Kokurikulum & Tokoh Murid</p>
-                                </div>
-                                <div class="bg-royal-800/50 border-l-4 border-yellow-400 p-3 rounded-r-xl">
-                                    <span class="text-xs font-bold text-yellow-300">12:15 Tengah Hari</span>
-                                    <p class="font-semibold text-white">Sesi Fotografi Rasmi & Jamuan Bersurai</p>
-                                </div>
-                            </div>
-                        `
-                    };
-
-                case 'buku_program':
-                    return {
-                        title: 'BUKU PROGRAM DIGITAL',
-                        subtitle: 'Edisi Khas Majlis Anugerah & Graduasi 2026',
-                        icon: tab.icon,
-                        html: `
-                            ${externalLinkBanner(tab.url, 'Buka E-Buku Program')}
-                            <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-4 text-center space-y-2">
-                                <div class="w-12 h-12 mx-auto rounded-full icon-badge flex items-center justify-center text-lg">
-                                    <i class="fa-solid fa-file-pdf"></i>
-                                </div>
-                                <h3 class="font-serif font-bold text-yellow-300 text-base">E-BUKU PROGRAM RASMI</h3>
-                                <p class="text-xs text-blue-100/90 leading-relaxed">
-                                    Memuatkan kata alu-aluan tetamu kehormat, senarai jawatankuasa pelaksana, senarai graduan serta penerima anugerah kecemerlangan tahun 2026.
-                                </p>
-                                <div class="pt-2 flex flex-col sm:flex-row gap-2 justify-center">
-                                    <button onclick="${tab.url ? `window.open('${tab.url}', '_blank')` : `showToast('Sila masukkan pautan Buku Program di Panel Admin')`}" class="bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold text-xs py-2.5 px-4 rounded-lg flex items-center justify-center space-x-2 transition">
-                                        <i class="fa-solid fa-eye"></i>
-                                        <span>Baca Buku Program</span>
-                                    </button>
-                                </div>
-                            </div>
-                        `
-                    };
-
-                case 'kehadiran':
-                    return {
-                        title: 'REKOD KEHADIRAN MAJLIS',
-                        subtitle: 'Pengesahan Kehadiran Tetamu, Ibu Bapa & Penjaga',
-                        icon: tab.icon,
-                        html: `
-                            ${externalLinkBanner(tab.url, 'Buka Borang Google Form')}
-                            <div class="bg-royal-800/50 border border-yellow-400/40 rounded-xl p-4 space-y-3">
-                                <div class="flex items-center space-x-2.5 text-yellow-300">
-                                    <i class="fa-solid fa-clipboard-check text-lg"></i>
-                                    <h3 class="font-bold text-sm">Borang Pendaftaran Kehadiran Pantas</h3>
-                                </div>
-                                <div class="space-y-2.5 text-xs">
-                                    <div>
-                                        <label class="block text-yellow-200/90 mb-1">Nama Penuh Tetamu / Ibu Bapa</label>
-                                        <input type="text" id="att-name" placeholder="Contoh: Ahmad bin Abdullah" class="w-full bg-royal-950 border border-yellow-400/40 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-yellow-300">
-                                    </div>
-                                    <div>
-                                        <label class="block text-yellow-200/90 mb-1">Kategori Kehadiran</label>
-                                        <select id="att-role" class="w-full bg-royal-950 border border-yellow-400/40 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-yellow-300">
-                                            <option value="Ibu Bapa / Penjaga">Ibu Bapa / Penjaga Murid</option>
-                                            <option value="Tetamu Jemputan">Tetamu Jemputan / VIP</option>
-                                            <option value="AJK PIBG">AJK PIBG</option>
-                                            <option value="Guru / Staf">Guru / Warga SKPK Miri</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label class="block text-yellow-200/90 mb-1">Nama Anak / Hubungan (Jika berkaitan)</label>
-                                        <input type="text" id="att-child" placeholder="Nama murid & kelas..." class="w-full bg-royal-950 border border-yellow-400/40 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-yellow-300">
-                                    </div>
-                                    <button onclick="submitQuickAttendance()" class="w-full bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold py-2.5 rounded-lg shadow transition mt-1">
-                                        <i class="fa-solid fa-paper-plane mr-1"></i> Sahkan Kehadiran
-                                    </button>
-                                </div>
-                                <div id="att-recent-list" class="pt-2 border-t border-yellow-400/20 space-y-1.5">
-                                    <p class="text-[11px] font-semibold text-yellow-300">Kehadiran Terkini Direkodkan:</p>
-                                    <div class="text-[11px] text-blue-200 bg-royal-950/60 px-3 py-1.5 rounded-lg flex justify-between">
-                                        <span>Pn. Siti Aminah (Ibu Bapa)</span>
-                                        <span class="text-yellow-400">Hadir</span>
-                                    </div>
-                                </div>
-                            </div>
-                        `
-                    };
-
-                case 'frame_majlis':
-                    return {
-                        title: 'FRAME MAJLIS (TWIBBON)',
-                        subtitle: 'Bingkai Foto Digital Rasmi Majlis 2026',
-                        icon: tab.icon,
-                        html: `
-                            ${externalLinkBanner(tab.url, 'Buka Frame Majlis')}
-                            <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-5 text-center space-y-3">
-                                <div class="w-14 h-14 mx-auto rounded-full icon-badge flex items-center justify-center text-xl">
-                                    <i class="fa-solid fa-camera"></i>
-                                </div>
-                                <h3 class="font-serif font-bold text-yellow-300 text-base">BINGKAI FOTO KENANGAN MAJLIS</h3>
-                                <p class="text-xs text-blue-100/90 leading-relaxed">
-                                    Abadikan kenangan istimewa anda bersama bingkai foto rasmi <strong>Majlis Anugerah Kecemerlangan & Graduasi SK Pendidikan Khas Miri 2026</strong>! Muat naik gambar anda dan kongsikan bersama keluarga.
-                                </p>
-                                <div class="pt-2">
-                                    <a href="${tab.url || 'https://twb.nz/majlis-apc-sekolah'}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold text-xs px-5 py-2.5 rounded-xl shadow transition">
-                                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                                        <span>Gunakan Frame Majlis Sekarang</span>
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        `
-                    };
-
-                case 'galeri':
-                    return {
-                        title: 'GALERI MAJLIS 2026',
-                        subtitle: 'Koleksi Rasmi Foto & Kenangan Sepanjang Majlis',
-                        icon: tab.icon,
-                        html: `
-                            ${externalLinkBanner(tab.url, 'Buka Folder Utama Galeri')}
-                            <div class="space-y-2.5">
-                                <!-- 1. ALBUM MAJLIS -->
-                                <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-3 flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <span class="icon-badge w-9 h-9 rounded-lg flex items-center justify-center shrink-0"><i class="fa-solid fa-camera-retro text-xs"></i></span>
-                                        <div>
-                                            <h4 class="font-bold text-yellow-200 text-xs">1. ALBUM MAJLIS</h4>
-                                            <p class="text-[10px] text-blue-200">Lensa rasmi sepanjang majlis berlangsung</p>
-                                        </div>
-                                    </div>
-                                    <button onclick="openSubLink('album_majlis')" class="bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold text-[11px] px-3 py-1.5 rounded-lg shrink-0 transition">
-                                        Lihat
-                                    </button>
-                                </div>
-
-                                <!-- 2. ALBUM PHOTOBOOTH -->
-                                <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-3 flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <span class="icon-badge w-9 h-9 rounded-lg flex items-center justify-center shrink-0"><i class="fa-solid fa-images text-xs"></i></span>
-                                        <div>
-                                            <h4 class="font-bold text-yellow-200 text-xs">2. ALBUM PHOTOBOOTH</h4>
-                                            <p class="text-[10px] text-blue-200">Kenangan ceria tetamu & keluarga</p>
-                                        </div>
-                                    </div>
-                                    <button onclick="openSubLink('album_photobooth')" class="bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold text-[11px] px-3 py-1.5 rounded-lg shrink-0 transition">
-                                        Lihat
-                                    </button>
-                                </div>
-
-                                <!-- 3. ALBUM GRADUASI (Tahun 6 & Prasekolah) -->
-                                <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-3 space-y-2">
-                                    <div class="flex items-center space-x-3">
-                                        <span class="icon-badge w-9 h-9 rounded-lg flex items-center justify-center shrink-0"><i class="fa-solid fa-graduation-cap text-xs"></i></span>
-                                        <div>
-                                            <h4 class="font-bold text-yellow-200 text-xs">3. ALBUM GRADUASI</h4>
-                                            <p class="text-[10px] text-blue-200">Pilih kategori graduan di bawah</p>
-                                        </div>
-                                    </div>
-                                    <div class="grid grid-cols-2 gap-2 pt-1">
-                                        <button onclick="openSubLink('album_graduasi_thn6')" class="bg-royal-950 hover:bg-yellow-400 hover:text-royal-950 border border-yellow-400/50 text-yellow-200 font-bold text-[11px] py-2 rounded-lg transition">
-                                            <i class="fa-solid fa-user-graduate mr-1"></i> Tahun 6
-                                        </button>
-                                        <button onclick="openSubLink('album_graduasi_pra')" class="bg-royal-950 hover:bg-yellow-400 hover:text-royal-950 border border-yellow-400/50 text-yellow-200 font-bold text-[11px] py-2 rounded-lg transition">
-                                            <i class="fa-solid fa-child-reaching mr-1"></i> Prasekolah
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- 4. ALBUM STUDIO -->
-                                <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-3 flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <span class="icon-badge w-9 h-9 rounded-lg flex items-center justify-center shrink-0"><i class="fa-solid fa-portrait text-xs"></i></span>
-                                        <div>
-                                            <h4 class="font-bold text-yellow-200 text-xs">4. ALBUM STUDIO</h4>
-                                            <p class="text-[10px] text-blue-200">Potret rasmi berjubah graduasi & anugerah</p>
-                                        </div>
-                                    </div>
-                                    <button onclick="openSubLink('album_studio')" class="bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold text-[11px] px-3 py-1.5 rounded-lg shrink-0 transition">
-                                        Lihat
-                                    </button>
-                                </div>
-                            </div>
-                        `
-                    };
-
-                case 'slaid_anugerah':
-                    return {
-                        title: 'SLIDE PENERIMA ANUGERAH',
-                        subtitle: 'Senarai & Paparan Slaid Kecemerlangan 2026',
-                        icon: tab.icon,
-                        html: `
-                            ${externalLinkBanner(tab.url, 'Buka Slaid Penuh')}
-                            <div class="space-y-2.5">
-                                <!-- 1. ANUGERAH KURIKULUM -->
-                                <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-3 flex items-center justify-between">
-                                    <div class="flex items-center space-x-2.5">
-                                        <span class="icon-badge w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0">1</span>
-                                        <div>
-                                            <h4 class="font-bold text-yellow-200 text-xs">ANUGERAH KURIKULUM</h4>
-                                            <p class="text-[10px] text-blue-200">Kecemerlangan Akademik & Mata Pelajaran</p>
-                                        </div>
-                                    </div>
-                                    <button onclick="openSubLink('anugerah_kurikulum')" class="bg-yellow-400/20 hover:bg-yellow-400 text-yellow-200 hover:text-royal-950 border border-yellow-400/50 font-bold text-[11px] px-3 py-1.5 rounded-lg transition">
-                                        Buka Slaid
-                                    </button>
-                                </div>
-
-                                <!-- 2. ANUGERAH HAL EHWAL MURID -->
-                                <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-3 flex items-center justify-between">
-                                    <div class="flex items-center space-x-2.5">
-                                        <span class="icon-badge w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0">2</span>
-                                        <div>
-                                            <h4 class="font-bold text-yellow-200 text-xs">ANUGERAH HAL EHWAL MURID</h4>
-                                            <p class="text-[10px] text-blue-200">Sahsiah Terpuji & Kehadiran Terbaik</p>
-                                        </div>
-                                    </div>
-                                    <button onclick="openSubLink('anugerah_hem')" class="bg-yellow-400/20 hover:bg-yellow-400 text-yellow-200 hover:text-royal-950 border border-yellow-400/50 font-bold text-[11px] px-3 py-1.5 rounded-lg transition">
-                                        Buka Slaid
-                                    </button>
-                                </div>
-
-                                <!-- 3. ANUGERAH KOKURIKULUM -->
-                                <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-3 flex items-center justify-between">
-                                    <div class="flex items-center space-x-2.5">
-                                        <span class="icon-badge w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0">3</span>
-                                        <div>
-                                            <h4 class="font-bold text-yellow-200 text-xs">ANUGERAH KOKURIKULUM</h4>
-                                            <p class="text-[10px] text-blue-200">Pencapaian Sukan, Kelab & Kebudayaan</p>
-                                        </div>
-                                    </div>
-                                    <button onclick="openSubLink('anugerah_kokurikulum')" class="bg-yellow-400/20 hover:bg-yellow-400 text-yellow-200 hover:text-royal-950 border border-yellow-400/50 font-bold text-[11px] px-3 py-1.5 rounded-lg transition">
-                                        Buka Slaid
-                                    </button>
-                                </div>
-
-                                <!-- 4. PENERIMA INSENTIF PIBG -->
-                                <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-3 flex items-center justify-between">
-                                    <div class="flex items-center space-x-2.5">
-                                        <span class="icon-badge w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0">4</span>
-                                        <div>
-                                            <h4 class="font-bold text-yellow-200 text-xs">PENERIMA INSENTIF PIBG</h4>
-                                            <p class="text-[10px] text-blue-200">Sumbangan Galakan Kecemerlangan PIBG</p>
-                                        </div>
-                                    </div>
-                                    <button onclick="openSubLink('insentif_pibg')" class="bg-yellow-400/20 hover:bg-yellow-400 text-yellow-200 hover:text-royal-950 border border-yellow-400/50 font-bold text-[11px] px-3 py-1.5 rounded-lg transition">
-                                        Buka Slaid
-                                    </button>
-                                </div>
-
-                                <!-- 5. TOKOH KOKURIKULUM (LELAKI & PEREMPUAN) -->
-                                <div class="bg-gradient-to-r from-royal-800/80 to-royal-900/90 border border-yellow-400/60 rounded-xl p-3 space-y-2">
-                                    <div class="flex items-center space-x-2.5">
-                                        <span class="icon-badge w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0">5</span>
-                                        <div>
-                                            <h4 class="font-bold text-yellow-300 text-xs">TOKOH KOKURIKULUM 2026</h4>
-                                            <p class="text-[10px] text-blue-200">Anugerah Khas Kecemerlangan Kokurikulum</p>
-                                        </div>
-                                    </div>
-                                    <div class="grid grid-cols-2 gap-2 pt-1">
-                                        <button onclick="openSubLink('tokoh_koku_lelaki')" class="bg-royal-950 hover:bg-yellow-400 hover:text-royal-950 border border-yellow-400/50 text-yellow-200 font-bold text-[11px] py-2 rounded-lg transition">
-                                            <i class="fa-solid fa-mars mr-1"></i> 1. LELAKI
-                                        </button>
-                                        <button onclick="openSubLink('tokoh_koku_perempuan')" class="bg-royal-950 hover:bg-yellow-400 hover:text-royal-950 border border-yellow-400/50 text-yellow-200 font-bold text-[11px] py-2 rounded-lg transition">
-                                            <i class="fa-solid fa-venus mr-1"></i> 2. PEREMPUAN
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- 6. TOKOH MURID -->
-                                <div class="bg-gradient-to-r from-yellow-500/20 to-royal-800/80 border-2 border-yellow-400 rounded-xl p-3.5 flex items-center justify-between">
-                                    <div class="flex items-center space-x-2.5">
-                                        <span class="icon-badge w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0"><i class="fa-solid fa-crown"></i></span>
-                                        <div>
-                                            <h4 class="font-serif font-bold text-yellow-300 text-xs sm:text-sm">6. TOKOH MURID 2026</h4>
-                                            <p class="text-[10px] text-blue-100">Anugerah Tertinggi Kecemerlangan Holistik</p>
-                                        </div>
-                                    </div>
-                                    <button onclick="openSubLink('tokoh_murid')" class="bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold text-[11px] px-3.5 py-2 rounded-lg shadow transition">
-                                        Buka Slaid
-                                    </button>
-                                </div>
-                            </div>
-                        `
-                    };
-
-                case 'penghargaan':
-                    return {
-                        title: 'SEKALUNG PENGHARGAAN',
-                        subtitle: 'Terima Kasih Atas Sokongan & Kerjasama',
-                        icon: tab.icon,
-                        html: `
-                            ${externalLinkBanner(tab.url)}
-                            <div class="bg-royal-800/50 border border-yellow-400/40 rounded-2xl p-4 text-center space-y-3">
-                                <i class="fa-solid fa-award text-3xl text-yellow-300"></i>
-                                <h3 class="font-serif font-bold text-yellow-300 text-base">TERIMA KASIH</h3>
-                                <p class="text-xs text-blue-100 leading-relaxed">
-                                    Jawatankuasa Pelaksana <strong>Majlis Anugerah Kecemerlangan dan Graduasi SK Pendidikan Khas Miri 2026</strong> dengan penuh rasa takzim merakamkan setinggi-tinggi penghargaan dan terima kasih kepada:
-                                </p>
-                                <ul class="text-xs text-left space-y-2 bg-royal-950/60 p-3.5 rounded-xl border border-yellow-400/20 text-yellow-100">
-                                    <li class="flex items-start space-x-2">
-                                        <i class="fa-solid fa-star text-yellow-400 mt-0.5 text-[10px]"></i>
-                                        <span>Tetamu Kehormat & Pegawai Pejabat Pendidikan Daerah Miri</span>
-                                    </li>
-                                    <li class="flex items-start space-x-2">
-                                        <i class="fa-solid fa-star text-yellow-400 mt-0.5 text-[10px]"></i>
-                                        <span>Barisan Pentadbir, Guru-Guru & Anggota Kumpulan Pelaksana (AKP) SKPK Miri</span>
-                                    </li>
-                                    <li class="flex items-start space-x-2">
-                                        <i class="fa-solid fa-star text-yellow-400 mt-0.5 text-[10px]"></i>
-                                        <span>Yang Dipertua & Ahli Jawatankuasa PIBG SK Pendidikan Khas Miri</span>
-                                    </li>
-                                    <li class="flex items-start space-x-2">
-                                        <i class="fa-solid fa-star text-yellow-400 mt-0.5 text-[10px]"></i>
-                                        <span>Para Ibu Bapa, Penjaga serta Para Penyumbang yang menjayakan majlis ini.</span>
-                                    </li>
-                                </ul>
-                                <p class="text-[11px] italic text-yellow-200/80 pt-1">
-                                    "Mendidik Dengan Kasih Sayang, Melakar Kecemerlangan Insan Istimewa"
-                                </p>
-                            </div>
-                        `
-                    };
-
-                default:
-                    // Untuk tab menu baharu yang ditambah oleh Admin
-                    return {
-                        title: tab.title,
-                        subtitle: tab.subtitle || 'Majlis Anugerah & Graduasi SKPK Miri 2026',
-                        icon: tab.icon,
-                        html: `
-                            <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-5 text-center space-y-3">
-                                <div class="icon-badge w-12 h-12 rounded-full flex items-center justify-center mx-auto text-lg">
-                                    <i class="fa-solid ${tab.icon}"></i>
-                                </div>
-                                <h3 class="font-serif font-bold text-yellow-300 text-base">${tab.title}</h3>
-                                <p class="text-xs text-blue-100">${tab.subtitle || 'Maklumat tambahan majlis.'}</p>
-                                ${tab.url ? `
-                                    <a href="${tab.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold text-xs px-5 py-2.5 rounded-xl transition">
-                                        <span>Buka Pautan</span>
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </a>
-                                ` : `
-                                    <p class="text-[11px] text-yellow-200/70 italic">Pautan belum ditetapkan. Admin boleh menambah pautan melalui Panel Admin.</p>
-                                `}
-                            </div>
-                        `
-                    };
+        // Data Lalai Menu Utama (Termasuk semua pautan & susunan terkini)
+        const DEFAULT_MENUS = [
+            {
+                id: 'tentatif',
+                title: 'TENTATIF',
+                subtitle: 'Atur Cara Rasmi Majlis',
+                icon: 'fa-clock',
+                type: 'internal',
+                url: ''
+            },
+            {
+                id: 'buku-program',
+                title: 'BUKU PROGRAM',
+                subtitle: 'E-Buku Program & Jawatankuasa',
+                icon: 'fa-book-open',
+                type: 'internal',
+                url: ''
+            },
+            {
+                id: 'kehadiran',
+                title: 'KEHADIRAN',
+                subtitle: 'Pendaftaran Kehadiran Tetamu & Ibu Bapa',
+                icon: 'fa-clipboard-user',
+                type: 'external',
+                url: 'https://skpkmiri.github.io/PIBG/'
+            },
+            {
+                id: 'frame-majlis',
+                title: 'FRAME MAJLIS',
+                subtitle: 'Bingkai Foto Digital Rasmi Majlis',
+                icon: 'fa-image-portrait',
+                type: 'external',
+                url: 'https://twb.nz/majlis-apc-sekolah'
+            },
+            {
+                id: 'galeri',
+                title: 'GALERI',
+                subtitle: 'Album Majlis, Photobooth, Graduasi & Studio',
+                icon: 'fa-images',
+                type: 'gallery',
+                url: ''
+            },
+            {
+                id: 'slide-anugerah',
+                title: 'SLIDE PENERIMA ANUGERAH',
+                subtitle: 'Kurikulum, HEM, Kokurikulum, PIBG & Tokoh',
+                icon: 'fa-trophy',
+                type: 'slides',
+                url: ''
+            },
+            {
+                id: 'penghargaan',
+                title: 'PENGHARGAAN',
+                subtitle: 'Sekalung Budi & Terima Kasih',
+                icon: 'fa-hand-holding-heart',
+                type: 'internal',
+                url: ''
             }
-        }
+        ];
 
-        function openSubLink(subKey) {
-            const item = subMenuLinks[subKey];
-            if (!item) return;
-            if (item.url && item.url.trim() !== '') {
-                window.open(item.url, '_blank', 'noopener,noreferrer');
-            } else {
-                showToast(`Pautan "${item.label}" belum ditetapkan di Panel Admin.`);
-            }
-        }
+        // Sub-menu Galeri
+        const DEFAULT_GALLERY_LINKS = {
+            albumMajlis: { title: 'ALBUM MAJLIS', url: 'https://photos.app.goo.gl/U7qQUcQR8EcstJdd6', icon: 'fa-camera-retro' },
+            albumPhotobooth: { title: 'ALBUM PHOTOBOOTH', url: 'https://photos.app.goo.gl/x9YuQfUQ3AAQVzvS7', icon: 'fa-wand-magic-sparkles' },
+            graduasiTahun6: { title: 'ALBUM GRADUASI - TAHUN 6', url: 'https://photos.app.goo.gl/zu3pm44nLHWjeTxS6', icon: 'fa-graduation-cap' },
+            graduasiPrasekolah: { title: 'ALBUM GRADUASI - PRASEKOLAH', url: 'https://photos.app.goo.gl/5vUcoShk7XbTBjNP8', icon: 'fa-child-reaching' },
+            albumStudio: { title: 'ALBUM STUDIO', url: 'https://photos.app.goo.gl/Yo2iDwnTcYEw3NyW8', icon: 'fa-portrait' }
+        };
 
-        function submitQuickAttendance() {
-            const nameInput = document.getElementById('att-name');
-            const roleInput = document.getElementById('att-role');
-            const name = nameInput.value.trim();
-            if (!name) {
-                showToast('Sila masukkan nama anda terlebih dahulu.');
+        // Sub-menu Slide Penerima Anugerah
+        const DEFAULT_SLIDE_LINKS = {
+            kurikulum: { title: 'ANUGERAH KURIKULUM', url: 'https://canva.link/qppqgd3ig0uc5p2', icon: 'fa-book-bookmark' },
+            hem: { title: 'ANUGERAH HAL EHWAL MURID', url: 'https://canva.link/3q649ti0oi9wcug', icon: 'fa-user-shield' },
+            kokurikulum: { title: 'ANUGERAH KOKURIKULUM', url: 'https://canva.link/u3wku9v5pichaxh', icon: 'fa-medal' },
+            pibg: { title: 'PENERIMA INSENTIF PIBG', url: 'https://canva.link/mt1aulij9qwyy3z', icon: 'fa-hand-holding-dollar' },
+            tokohKokoLelaki: { title: 'TOKOH KOKURIKULUM (LELAKI)', url: '', icon: 'fa-award' },
+            tokohKokoPerempuan: { title: 'TOKOH KOKURIKULUM (PEREMPUAN)', url: '', icon: 'fa-award' },
+            tokohMurid: { title: 'TOKOH MURID', url: '', icon: 'fa-crown' }
+        };
+
+        // Keadaan Semasa Aplikasi
+        let appState = {
+            menus: JSON.parse(JSON.stringify(DEFAULT_MENUS)),
+            galleryLinks: JSON.parse(JSON.stringify(DEFAULT_GALLERY_LINKS)),
+            slideLinks: JSON.parse(JSON.stringify(DEFAULT_SLIDE_LINKS))
+        };
+
+        let currentUser = null;
+
+        // Fungsi Animasi Nombor Pelawat
+        function animateNumber(element, target) {
+            if (!element) return;
+            const start = parseInt(element.textContent.replace(/,/g, '')) || 0;
+            if (start === target) {
+                element.textContent = target.toLocaleString('ms-MY');
                 return;
             }
-            const list = document.getElementById('att-recent-list');
-            const entry = document.createElement('div');
-            entry.className = 'text-[11px] text-blue-200 bg-royal-950/60 px-3 py-1.5 rounded-lg flex justify-between';
-            entry.innerHTML = `<span>${name} (${roleInput.value})</span><span class="text-yellow-400 font-semibold">Baru Hadir</span>`;
-            list.appendChild(entry);
-
-            nameInput.value = '';
-            document.getElementById('att-child').value = '';
-            showToast(`Terima kasih ${name}, kehadiran anda telah direkodkan!`);
-        }
-
-        // ==========================================
-        // 4. KAWALAN MODAL MENU & NOTIFIKASI
-        // ==========================================
-        let currentActiveKey = '';
-
-        function openSection(id) {
-            const tab = menuTabs.find(t => t.id === id);
-            if (!tab) return;
-
-            currentActiveKey = id;
-            const content = getSectionContent(tab);
-            document.getElementById('modal-title').textContent = content.title;
-            document.getElementById('modal-subtitle').textContent = content.subtitle;
-            document.getElementById('modal-icon').innerHTML = `<i class="fa-solid ${content.icon}"></i>`;
-            document.getElementById('modal-body').innerHTML = content.html;
-
-            document.getElementById('content-modal').classList.remove('hidden');
-        }
-
-        function closeModal() {
-            document.getElementById('content-modal').classList.add('hidden');
-        }
-
-        document.getElementById('content-modal').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
-
-        // ==========================================
-        // 5. BAHAGIAN PANEL ADMIN
-        // ==========================================
-        let isAdminAuthenticated = false;
-
-        function openAdminGate() {
-            document.getElementById('admin-modal').classList.remove('hidden');
-            if (isAdminAuthenticated) {
-                document.getElementById('admin-login-view').classList.add('hidden');
-                document.getElementById('admin-dashboard-view').classList.remove('hidden');
-                renderAdminControls();
-            } else {
-                document.getElementById('admin-login-view').classList.remove('hidden');
-                document.getElementById('admin-dashboard-view').classList.add('hidden');
-                document.getElementById('admin-password-input').value = '';
+            const duration = 600;
+            const startTime = performance.now();
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const current = Math.floor(start + (target - start) * progress);
+                element.textContent = current.toLocaleString('ms-MY');
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    element.textContent = target.toLocaleString('ms-MY');
+                }
             }
+            requestAnimationFrame(update);
         }
 
-        function closeAdminModal() {
-            document.getElementById('admin-modal').classList.add('hidden');
-            renderMainMenu();
-        }
+        // Papar Notifikasi Toast
+        window.showToast = function(msg) {
+            const toast = document.getElementById('toastNotification');
+            const msgEl = document.getElementById('toastMessage');
+            if (!toast || !msgEl) return;
+            msgEl.textContent = msg;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 3000);
+        };
 
-        function verifyAdminLogin() {
-            const pass = document.getElementById('admin-password-input').value.trim();
-            if (pass === 'YBA4112') {
-                isAdminAuthenticated = true;
-                document.getElementById('admin-login-view').classList.add('hidden');
-                document.getElementById('admin-dashboard-view').classList.remove('hidden');
-                renderAdminControls();
-                showToast('Selamat datang ke Panel Pengurusan Admin!');
-            } else {
-                showToast('Kata laluan salah! Sila cuba semula.');
+        // Render Butang Menu Utama
+        window.renderMainMenu = function() {
+            const container = document.getElementById('dynamic-menu-container');
+            if (!container) return;
+            container.innerHTML = '';
+
+            appState.menus.forEach((menu) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'gold-btn w-full rounded-2xl px-3.5 py-2.5 flex items-center justify-between text-left group';
+                btn.onclick = () => handleMenuClick(menu);
+
+                btn.innerHTML = `
+                    <div class="flex items-center gap-3 min-w-0">
+                        <div class="gold-icon-badge w-9 h-9 rounded-xl flex items-center justify-center text-sm shrink-0 group-hover:scale-105 transition">
+                            <i class="fa-solid ${menu.icon || 'fa-star'}"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <div class="font-extrabold text-xs sm:text-[13px] text-[#FDE08D] tracking-wide uppercase truncate">
+                                ${menu.title}
+                            </div>
+                            <div class="text-[10px] sm:text-[11px] text-blue-100/80 truncate">
+                                ${menu.subtitle || ''}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-[#FDE08D]/80 group-hover:text-[#FDE08D] group-hover:translate-x-1 transition pl-2 shrink-0">
+                        <i class="fa-solid ${menu.url && menu.type === 'external' ? 'fa-arrow-up-right-from-square text-xs' : 'fa-chevron-right text-xs'}"></i>
+                    </div>
+                `;
+                container.appendChild(btn);
+            });
+        };
+
+        // Kendali Klik Menu Utama
+        window.handleMenuClick = function(menu) {
+            if (menu.url && menu.url.trim() !== '') {
+                window.open(menu.url.trim(), '_blank', 'noopener,noreferrer');
+                return;
             }
+
+            if (menu.type === 'gallery' || menu.id === 'galeri') {
+                openGalleryModal();
+            } else if (menu.type === 'slides' || menu.id === 'slide-anugerah') {
+                openSlidesModal();
+            } else if (menu.id === 'tentatif') {
+                openTentatifModal();
+            } else if (menu.id === 'buku-program') {
+                openBukuProgramModal();
+            } else if (menu.id === 'penghargaan') {
+                openPenghargaanModal();
+            } else {
+                openGenericModal(menu);
+            }
+        };
+
+        // Modal Tentatif
+        function openTentatifModal() {
+            const items = [
+                { time: '7:30 Pagi', event: 'Pendaftaran Tetamu, Ibu Bapa & Murid' },
+                { time: '8:00 Pagi', event: 'Ketibaan Tetamu Kehormat & Perarakan Masuk Graduan' },
+                { time: '8:30 Pagi', event: 'Nyanyian Lagu Negaraku, Ibu Pertiwiku & Lagu Sekolah' },
+                { time: '8:45 Pagi', event: 'Bacaan Doa & Ucapan Alu-aluan Guru Besar SKPK Miri' },
+                { time: '9:15 Pagi', event: 'Ucapan Perasmian Majlis Anugerah Kecemerlangan & Graduasi 2026' },
+                { time: '9:45 Pagi', event: 'Persembahan Murid Pendidikan Khas' },
+                { time: '10:15 Pagi', event: 'Penyampaian Sijil Graduasi Prasekolah & Tahun 6' },
+                { time: '11:00 Pagi', event: 'Penyampaian Anugerah Kurikulum, HEM, Kokurikulum & Insentif PIBG' },
+                { time: '11:45 Pagi', event: 'Pengumuman Tokoh Kokurikulum & Tokoh Murid 2026' },
+                { time: '12:15 Tengah Hari', event: 'Sesi Bergambar & Majlis Bersurai' }
+            ];
+
+            const html = `
+                <div class="space-y-2">
+                    ${items.map(item => `
+                        <div class="p-2.5 rounded-xl bg-[#041233]/90 border border-[#D4AF37]/30 flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-[#D4AF37]/20 border border-[#D4AF37]/50 text-[#FDE08D] font-bold text-[11px] whitespace-nowrap mt-0.5">${item.time}</span>
+                            <span class="text-xs text-blue-50 leading-relaxed">${item.event}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            showContentModal('TENTATIF MAJLIS', 'Rabu • 02 Disember 2026 • SK Pendidikan Khas Miri', 'fa-clock', html);
         }
 
-        function renderAdminControls() {
-            // Render Senarai Tab Menu Utama (Susun Atur & Pautan)
-            const menuListEl = document.getElementById('admin-menu-list');
-            menuListEl.innerHTML = menuTabs.map((tab, index) => `
-                <div class="bg-royal-950/80 border border-yellow-400/30 rounded-xl p-2.5 space-y-2">
+        // Modal Buku Program
+        function openBukuProgramModal() {
+            const html = `
+                <div class="space-y-3 text-xs leading-relaxed">
+                    <div class="p-3 rounded-xl bg-[#041233] border border-[#D4AF37]/40 text-center">
+                        <h4 class="font-bold text-[#FDE08D] uppercase text-sm mb-1">Kata Alu-aluan</h4>
+                        <p class="text-blue-100/90">Selamat datang ke Majlis Anugerah Kecemerlangan dan Graduasi SK Pendidikan Khas Miri Tahun 2026. Majlis ini diadakan bagi mengiktiraf pencapaian cemerlang murid-murid dalam bidang akademik, sahsiah dan kokurikulum.</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-[#041233] border border-[#D4AF37]/40">
+                        <h4 class="font-bold text-[#FDE08D] uppercase mb-2 border-b border-[#D4AF37]/30 pb-1">Jawatankuasa Induk</h4>
+                        <ul class="space-y-1.5 text-blue-100">
+                            <li><strong class="text-[#FDE08D]">Pengerusi:</strong> Guru Besar SK Pendidikan Khas Miri</li>
+                            <li><strong class="text-[#FDE08D]">Timbalan Pengerusi:</strong> Penolong Kanan Pentadbiran</li>
+                            <li><strong class="text-[#FDE08D]">Naib Pengerusi 1:</strong> Penolong Kanan Hal Ehwal Murid</li>
+                            <li><strong class="text-[#FDE08D]">Naib Pengerusi 2:</strong> Penolong Kanan Kokurikulum</li>
+                            <li><strong class="text-[#FDE08D]">Penyelaras Program:</strong> Jawatankuasa Majlis Anugerah 2026</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+            showContentModal('BUKU PROGRAM', 'E-Buku Program & Jawatankuasa Pelaksana', 'fa-book-open', html);
+        }
+
+        // Modal Galeri (Album Majlis, Photobooth, Graduasi Tahun 6 & Prasekolah, Studio)
+        function openGalleryModal() {
+            const g = appState.galleryLinks;
+            const list = [
+                g.albumMajlis,
+                g.albumPhotobooth,
+                g.graduasiTahun6,
+                g.graduasiPrasekolah,
+                g.albumStudio
+            ];
+
+            const html = `
+                <p class="text-xs text-blue-200 mb-2">Pilih kategori album gambar untuk membuka galeri foto rasmi majlis:</p>
+                <div class="space-y-2.5">
+                    ${list.map(item => `
+                        <a href="${item.url || '#'}" ${item.url ? 'target="_blank" rel="noopener noreferrer"' : 'onclick="event.preventDefault(); showToast(\'Pautan belum dikemaskini oleh Admin.\')"'}
+                           class="gold-btn w-full rounded-xl p-3 flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <div class="gold-icon-badge w-8 h-8 rounded-lg flex items-center justify-center text-xs shrink-0">
+                                    <i class="fa-solid ${item.icon}"></i>
+                                </div>
+                                <span class="font-bold text-xs text-[#FDE08D] uppercase tracking-wide">${item.title}</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-[#FDE08D]/80 group-hover:text-[#FDE08D]"></i>
+                        </a>
+                    `).join('')}
+                </div>
+            `;
+            showContentModal('GALERI FOTO MAJLIS', 'Koleksi Gambar Kenangan 2026', 'fa-images', html);
+        }
+
+        // Modal Slide Penerima Anugerah
+        function openSlidesModal() {
+            const s = appState.slideLinks;
+            const list = [
+                s.kurikulum,
+                s.hem,
+                s.kokurikulum,
+                s.pibg,
+                s.tokohKokoLelaki,
+                s.tokohKokoPerempuan,
+                s.tokohMurid
+            ];
+
+            const html = `
+                <p class="text-xs text-blue-200 mb-2">Pilih kategori anugerah untuk melihat paparan slaid penerima:</p>
+                <div class="space-y-2">
+                    ${list.map(item => `
+                        <a href="${item.url || '#'}" ${item.url ? 'target="_blank" rel="noopener noreferrer"' : 'onclick="event.preventDefault(); showToast(\'Slaid kategori ini belum dimuat naik oleh Admin.\')"'}
+                           class="gold-btn w-full rounded-xl p-3 flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <div class="gold-icon-badge w-8 h-8 rounded-lg flex items-center justify-center text-xs shrink-0">
+                                    <i class="fa-solid ${item.icon}"></i>
+                                </div>
+                                <span class="font-bold text-xs text-[#FDE08D] uppercase tracking-wide">${item.title}</span>
+                            </div>
+                            <span class="text-[10px] px-2 py-0.5 rounded-full ${item.url ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-400/40' : 'bg-white/10 text-blue-200/60'}">
+                                ${item.url ? 'Buka Slaid' : 'Akan Datang'}
+                            </span>
+                        </a>
+                    `).join('')}
+                </div>
+            `;
+            showContentModal('SLIDE PENERIMA ANUGERAH', 'Senarai & Paparan Penerima Anugerah 2026', 'fa-trophy', html);
+        }
+
+        // Modal Penghargaan
+        function openPenghargaanModal() {
+            const html = `
+                <div class="p-4 rounded-xl bg-[#041233] border border-[#D4AF37]/40 text-center space-y-3 text-xs leading-relaxed">
+                    <div class="w-12 h-12 rounded-full gold-icon-badge mx-auto flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-[#FDE08D] uppercase">Sekalung Budi & Penghargaan</h4>
+                    <p class="text-blue-100">
+                        Jawatankuasa Majlis Anugerah Kecemerlangan dan Graduasi SK Pendidikan Khas Miri Tahun 2026 merakamkan setinggi-tinggi penghargaan dan terima kasih kepada:
+                    </p>
+                    <ul class="space-y-1.5 text-[#FDE08D] font-semibold">
+                        <li>• Tetamu Kehormat & Pegawai Pendidikan Daerah Miri</li>
+                        <li>• Yang Dipertua & Barisan AJK PIBG SKPK Miri</li>
+                        <li>• Barisan Pentadbir, Guru-guru & Anggota Kumpulan Pelaksana</li>
+                        <li>• Para Ibu Bapa, Penjaga serta Semua Penyumbang</li>
+                    </ul>
+                    <p class="text-blue-200/80 italic pt-1">
+                        "Anak-anak Istimewa Permata Negara"
+                    </p>
+                </div>
+            `;
+            showContentModal('PENGHARGAAN', 'Sekalung Budi & Terima Kasih', 'fa-hand-holding-heart', html);
+        }
+
+        // Modal Tab Tambahan Tanpa URL
+        function openGenericModal(menu) {
+            const html = `
+                <div class="p-4 rounded-xl bg-[#041233] border border-[#D4AF37]/40 text-center space-y-2">
+                    <p class="text-xs text-blue-100">${menu.subtitle || 'Maklumat rasmi bagi ' + menu.title}</p>
+                    <p class="text-[11px] text-[#FDE08D]/80">Pautan luar belum ditetapkan oleh pihak pentadbir.</p>
+                </div>
+            `;
+            showContentModal(menu.title, menu.subtitle || 'Info Majlis', menu.icon || 'fa-star', html);
+        }
+
+        function showContentModal(title, subtitle, icon, bodyHtml) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalSubtitle').textContent = subtitle;
+            document.getElementById('modalIconBox').innerHTML = `<i class="fa-solid ${icon}"></i>`;
+            document.getElementById('modalBody').innerHTML = bodyHtml;
+            document.getElementById('contentModal').classList.remove('hidden');
+        }
+
+        window.closeModal = function(id) {
+            const el = document.getElementById(id);
+            if (el) el.classList.add('hidden');
+        };
+
+        // ==================== FUNGSI ADMIN ====================
+        window.openAdminLogin = function() {
+            document.getElementById('adminPasswordInput').value = '';
+            document.getElementById('adminLoginError').classList.add('hidden');
+            document.getElementById('adminLoginModal').classList.remove('hidden');
+        };
+
+        window.handleAdminLogin = function(e) {
+            e.preventDefault();
+            const pwd = document.getElementById('adminPasswordInput').value.trim();
+            if (pwd === 'YBA4112') {
+                closeModal('adminLoginModal');
+                openAdminPanel();
+            } else {
+                document.getElementById('adminLoginError').classList.remove('hidden');
+            }
+        };
+
+        window.openAdminPanel = function() {
+            renderAdminForms();
+            switchAdminTab('links');
+            document.getElementById('adminPanelModal').classList.remove('hidden');
+        };
+
+        window.switchAdminTab = function(tabName) {
+            ['links', 'add', 'order'].forEach(t => {
+                const panel = document.getElementById(`adminTab-${t}`);
+                const btn = document.getElementById(`tabBtn-${t}`);
+                if (t === tabName) {
+                    panel.classList.remove('hidden');
+                    btn.className = 'py-2.5 text-[#FDE08D] border-b-2 border-[#FDE08D] bg-[#082054]/60';
+                } else {
+                    panel.classList.add('hidden');
+                    btn.className = 'py-2.5 text-blue-200/70 hover:text-white border-b-2 border-transparent';
+                }
+            });
+            if (tabName === 'order') renderAdminOrderList();
+        };
+
+        function renderAdminForms() {
+            // 1. Pautan Menu Utama
+            const mainList = document.getElementById('adminMainLinksList');
+            mainList.innerHTML = appState.menus.map((m, idx) => `
+                <div class="bg-[#020b24]/70 p-2.5 rounded-xl border border-[#D4AF37]/25 space-y-1.5">
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <span class="bg-yellow-400/20 text-yellow-300 font-bold px-2 py-0.5 rounded text-[10px]">#${index + 1}</span>
-                            <span class="font-bold text-white text-xs">${tab.title}</span>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <button onclick="moveMenuTab(${index}, -1)" ${index === 0 ? 'disabled' : ''} title="Naikkan" class="w-6 h-6 rounded bg-royal-800 hover:bg-yellow-400 hover:text-royal-950 disabled:opacity-30 text-yellow-200 flex items-center justify-center transition">
-                                <i class="fa-solid fa-arrow-up text-[10px]"></i>
-                            </button>
-                            <button onclick="moveMenuTab(${index}, 1)" ${index === menuTabs.length - 1 ? 'disabled' : ''} title="Turunkan" class="w-6 h-6 rounded bg-royal-800 hover:bg-yellow-400 hover:text-royal-950 disabled:opacity-30 text-yellow-200 flex items-center justify-center transition">
-                                <i class="fa-solid fa-arrow-down text-[10px]"></i>
-                            </button>
-                            ${tab.isCustom ? `
-                                <button onclick="deleteMenuTab(${index})" title="Padam Tab" class="w-6 h-6 rounded bg-red-500/20 hover:bg-red-500 text-red-300 hover:text-white flex items-center justify-center transition ml-1">
-                                    <i class="fa-solid fa-trash text-[10px]"></i>
-                                </button>
-                            ` : ''}
-                        </div>
+                        <span class="text-[11px] font-bold text-[#FDE08D]">${m.title}</span>
+                        ${!['tentatif', 'buku-program', 'galeri', 'slide-anugerah', 'penghargaan'].includes(m.id) ? 
+                            `<button type="button" onclick="deleteMenuTab(${idx})" class="text-[10px] text-red-400 hover:underline"><i class="fa-solid fa-trash"></i> Padam</button>` : ''}
                     </div>
-                    <div class="flex items-center space-x-1.5">
-                        <input type="url" value="${tab.url}" onchange="updateMenuUrl(${index}, this.value)" placeholder="Masukkan pautan (https://...)" class="flex-1 bg-royal-900 border border-yellow-400/30 rounded-lg px-2.5 py-1.5 text-[11px] text-yellow-100 focus:outline-none focus:border-yellow-300">
-                    </div>
+                    <input type="url" data-main-idx="${idx}" value="${m.url || ''}" placeholder="https://... (Kosongkan jika modal dalaman)" class="w-full px-2.5 py-1.5 rounded-lg bg-[#041233] border border-[#D4AF37]/30 text-xs text-white focus:border-[#FDE08D] focus:outline-none">
                 </div>
             `).join('');
 
-            // Render Senarai Pautan Sub-Menu (Galeri & Slaid Anugerah)
-            const subListEl = document.getElementById('admin-sublinks-list');
-            subListEl.innerHTML = Object.keys(subMenuLinks).map(key => {
-                const sub = subMenuLinks[key];
-                return `
-                    <div class="bg-royal-950/70 border border-white/10 rounded-lg p-2 space-y-1">
-                        <label class="block text-[10px] font-semibold text-yellow-200">${sub.label}</label>
-                        <input type="url" value="${sub.url}" onchange="updateSubMenuUrl('${key}', this.value)" placeholder="https://pautan-drive-atau-slaid..." class="w-full bg-royal-900 border border-yellow-400/30 rounded px-2.5 py-1 text-[11px] text-white focus:outline-none focus:border-yellow-300">
-                    </div>
-                `;
-            }).join('');
+            // 2. Pautan Galeri
+            const galList = document.getElementById('adminGalleryLinksList');
+            galList.innerHTML = Object.entries(appState.galleryLinks).map(([key, item]) => `
+                <div class="bg-[#020b24]/70 p-2.5 rounded-xl border border-[#D4AF37]/25 space-y-1">
+                    <label class="block text-[11px] font-bold text-[#FDE08D]">${item.title}</label>
+                    <input type="url" data-gal-key="${key}" value="${item.url || ''}" placeholder="https://photos.app.goo.gl/..." class="w-full px-2.5 py-1.5 rounded-lg bg-[#041233] border border-[#D4AF37]/30 text-xs text-white focus:border-[#FDE08D] focus:outline-none">
+                </div>
+            `).join('');
+
+            // 3. Pautan Slide Penerima Anugerah
+            const slideList = document.getElementById('adminSlideLinksList');
+            slideList.innerHTML = Object.entries(appState.slideLinks).map(([key, item]) => `
+                <div class="bg-[#020b24]/70 p-2.5 rounded-xl border border-[#D4AF37]/25 space-y-1">
+                    <label class="block text-[11px] font-bold text-[#FDE08D]">${item.title}</label>
+                    <input type="url" data-slide-key="${key}" value="${item.url || ''}" placeholder="https://canva.link/..." class="w-full px-2.5 py-1.5 rounded-lg bg-[#041233] border border-[#D4AF37]/30 text-xs text-white focus:border-[#FDE08D] focus:outline-none">
+                </div>
+            `).join('');
         }
 
-        function moveMenuTab(index, direction) {
-            const newIndex = index + direction;
-            if (newIndex < 0 || newIndex >= menuTabs.length) return;
-            const temp = menuTabs[index];
-            menuTabs[index] = menuTabs[newIndex];
-            menuTabs[newIndex] = temp;
-            renderAdminControls();
+        window.saveAllAdminLinks = async function() {
+            document.querySelectorAll('[data-main-idx]').forEach(input => {
+                const idx = parseInt(input.getAttribute('data-main-idx'));
+                const val = input.value.trim();
+                appState.menus[idx].url = val;
+                if (val && !['galeri', 'slide-anugerah'].includes(appState.menus[idx].id)) {
+                    appState.menus[idx].type = 'external';
+                }
+            });
+
+            document.querySelectorAll('[data-gal-key]').forEach(input => {
+                const key = input.getAttribute('data-gal-key');
+                appState.galleryLinks[key].url = input.value.trim();
+            });
+
+            document.querySelectorAll('[data-slide-key]').forEach(input => {
+                const key = input.getAttribute('data-slide-key');
+                appState.slideLinks[key].url = input.value.trim();
+            });
+
+            await syncConfigToFirestore();
             renderMainMenu();
-        }
+            showToast('Semua pautan berjaya dikemas kini!');
+        };
 
-        function updateMenuUrl(index, newUrl) {
-            menuTabs[index].url = newUrl.trim();
-            showToast(`Pautan "${menuTabs[index].title}" dikemaskini!`);
-        }
+        window.handleAddNewMenuTab = async function(e) {
+            e.preventDefault();
+            const title = document.getElementById('newTabTitle').value.trim().toUpperCase();
+            const subtitle = document.getElementById('newTabSubtitle').value.trim();
+            const url = document.getElementById('newTabUrl').value.trim();
+            const icon = document.getElementById('newTabIcon').value;
 
-        function updateSubMenuUrl(key, newUrl) {
-            subMenuLinks[key].url = newUrl.trim();
-            showToast(`Pautan "${subMenuLinks[key].label}" dikemaskini!`);
-        }
-
-        function adminAddMenuTab() {
-            const titleEl = document.getElementById('new-menu-title');
-            const subEl = document.getElementById('new-menu-subtitle');
-            const iconEl = document.getElementById('new-menu-icon');
-            const urlEl = document.getElementById('new-menu-url');
-
-            const title = titleEl.value.trim().toUpperCase();
-            if (!title) {
-                showToast('Sila masukkan nama tab menu baharu.');
-                return;
-            }
-
-            const newTab = {
-                id: 'custom_' + Date.now(),
-                title: title,
-                subtitle: subEl.value.trim() || 'Menu Tambahan Majlis 2026',
-                icon: iconEl.value,
-                url: urlEl.value.trim(),
-                isCustom: true
+            const newMenu = {
+                id: 'custom-' + Date.now(),
+                title,
+                subtitle,
+                icon,
+                type: url ? 'external' : 'internal',
+                url
             };
 
-            menuTabs.push(newTab);
-            titleEl.value = '';
-            subEl.value = '';
-            urlEl.value = '';
-
-            renderAdminControls();
+            appState.menus.push(newMenu);
+            await syncConfigToFirestore();
             renderMainMenu();
-            showToast(`Tab menu "${title}" berjaya ditambah!`);
-        }
+            e.target.reset();
+            switchAdminTab('links');
+            renderAdminForms();
+            showToast(`Tab "${title}" berjaya ditambah!`);
+        };
 
-        function deleteMenuTab(index) {
-            const removed = menuTabs.splice(index, 1)[0];
-            renderAdminControls();
+        window.deleteMenuTab = async function(idx) {
+            const removed = appState.menus.splice(idx, 1);
+            await syncConfigToFirestore();
             renderMainMenu();
-            showToast(`Tab "${removed.title}" dipadam.`);
+            renderAdminForms();
+            showToast(`Tab "${removed[0]?.title}" dipadam.`);
+        };
+
+        function renderAdminOrderList() {
+            const list = document.getElementById('adminOrderList');
+            list.innerHTML = appState.menus.map((m, idx) => `
+                <div class="bg-[#020b24]/80 px-3 py-2 rounded-xl border border-[#D4AF37]/30 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-bold text-[#FDE08D] w-5">${idx + 1}.</span>
+                        <i class="fa-solid ${m.icon} text-xs text-blue-200"></i>
+                        <span class="text-xs font-semibold text-white">${m.title}</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <button type="button" onclick="moveMenu(${idx}, -1)" ${idx === 0 ? 'disabled' : ''} class="w-7 h-7 rounded-lg bg-[#082054] hover:bg-[#D4AF37] hover:text-[#020b24] disabled:opacity-30 text-xs flex items-center justify-center transition">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </button>
+                        <button type="button" onclick="moveMenu(${idx}, 1)" ${idx === appState.menus.length - 1 ? 'disabled' : ''} class="w-7 h-7 rounded-lg bg-[#082054] hover:bg-[#D4AF37] hover:text-[#020b24] disabled:opacity-30 text-xs flex items-center justify-center transition">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
         }
 
-        // ==========================================
-        // 6. KONGSI & TOAST
-        // ==========================================
-        function shareCurrentSection() {
-            const title = document.getElementById('modal-title').textContent;
-            const tempInput = document.createElement('input');
-            tempInput.value = window.location.href;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-
-            showToast(`Pautan "${title}" berjaya disalin!`);
-        }
-
-        function showToast(message) {
-            const toast = document.getElementById('toast-box');
-            const msgEl = document.getElementById('toast-msg');
-            msgEl.textContent = message;
-            toast.classList.remove('hidden');
-
-            clearTimeout(window.toastTimer);
-            window.toastTimer = setTimeout(() => {
-                toast.classList.add('hidden');
-            }, 2800);
-        }
-
-        // Inisialisasi apabila halaman dimuatkan
-        window.addEventListener('DOMContentLoaded', () => {
-            initVisitorCounter();
+        window.moveMenu = async function(idx, direction) {
+            const newIdx = idx + direction;
+            if (newIdx < 0 || newIdx >= appState.menus.length) return;
+            const temp = appState.menus[idx];
+            appState.menus[idx] = appState.menus[newIdx];
+            appState.menus[newIdx] = temp;
+            renderAdminOrderList();
             renderMainMenu();
+            await syncConfigToFirestore();
+            showToast('Susunan tab dikemas kini!');
+        };
+
+        // ==================== PENYEGERAKAN FIREBASE ====================
+        async function syncConfigToFirestore() {
+            if (!currentUser) return;
+            try {
+                const configRef = doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'appConfig');
+                await setDoc(configRef, {
+                    menus: JSON.stringify(appState.menus),
+                    galleryLinks: JSON.stringify(appState.galleryLinks),
+                    slideLinks: JSON.stringify(appState.slideLinks),
+                    updatedAt: new Date().toISOString()
+                }, { merge: true });
+            } catch (err) {
+                console.error('Ralat menyimpan tetapan ke Firebase:', err);
+            }
+        }
+
+        async function initFirebaseData() {
+            try {
+                const userCred = await signInAnonymously(auth);
+                currentUser = userCred.user;
+
+                // 1. Dengar Tetapan Menu & Pautan secara langsung
+                const configRef = doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'appConfig');
+                onSnapshot(configRef, (snap) => {
+                    if (snap.exists()) {
+                        const data = snap.data();
+                        if (data.menus) appState.menus = JSON.parse(data.menus);
+                        if (data.galleryLinks) appState.galleryLinks = JSON.parse(data.galleryLinks);
+                        if (data.slideLinks) appState.slideLinks = JSON.parse(data.slideLinks);
+                        renderMainMenu();
+                    } else {
+                        syncConfigToFirestore();
+                    }
+                }, (error) => {
+                    console.warn('Mod luar talian digunakan untuk menu:', error);
+                });
+
+                // 2. Pengiraan Pelawat Hari Ini & Jumlah Pelawat
+                const todayStr = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+                const statsRef = doc(db, 'artifacts', appId, 'public', 'data', 'stats', 'visitors');
+
+                // Dengar perubahan angka pelawat secara masa nyata
+                onSnapshot(statsRef, (snap) => {
+                    const todayEl = document.getElementById('visitor-today');
+                    const totalEl = document.getElementById('visitor-total');
+                    if (snap.exists()) {
+                        const d = snap.data();
+                        const todayCount = (d.date === todayStr) ? (d.today || 1) : 1;
+                        const totalCount = d.total || 1;
+                        animateNumber(todayEl, todayCount);
+                        animateNumber(totalEl, totalCount);
+                    }
+                }, (error) => {
+                    console.warn('Ralat bacaan pelawat:', error);
+                });
+
+                // Rekod lawatan baharu bagi sesi semasa
+                if (!sessionStorage.getItem('skpkmiri_visited_2026')) {
+                    sessionStorage.setItem('skpkmiri_visited_2026', 'true');
+                    const snap = await getDoc(statsRef);
+                    if (!snap.exists()) {
+                        await setDoc(statsRef, {
+                            date: todayStr,
+                            today: 1,
+                            total: 1
+                        });
+                    } else {
+                        const data = snap.data();
+                        if (data.date === todayStr) {
+                            await updateDoc(statsRef, {
+                                today: increment(1),
+                                total: increment(1)
+                            });
+                        } else {
+                            await setDoc(statsRef, {
+                                date: todayStr,
+                                today: 1,
+                                total: (data.total || 0) + 1
+                            });
+                        }
+                    }
+                }
+            } catch (error) {
+                console.error('Ralat sambungan Firebase:', error);
+            }
+        }
+
+        // Mulakan paparan apabila halaman siap dimuatkan
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMainMenu();
+            initFirebaseData();
         });
     </script>
 </body>
