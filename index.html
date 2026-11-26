@@ -190,7 +190,7 @@
                 <div class="flex items-center space-x-1.5">
                     <i class="fa-solid fa-user-clock text-[10px] text-yellow-300"></i>
                     <span class="text-[9px] uppercase tracking-wider text-yellow-200/80 font-medium">Hari Ini:</span>
-                    <span id="visitor-today" class="text-xs font-bold text-white font-serif">148</span>
+                    <span id="visitor-today" class="text-xs font-bold text-white font-serif">1</span>
                 </div>
 
                 <div class="h-3.5 w-[1px] bg-yellow-400/40"></div>
@@ -198,7 +198,7 @@
                 <div class="flex items-center space-x-1.5">
                     <i class="fa-solid fa-users text-[10px] text-yellow-300"></i>
                     <span class="text-[9px] uppercase tracking-wider text-yellow-200/80 font-medium">Jumlah:</span>
-                    <span id="visitor-total" class="text-xs font-bold text-yellow-300 font-serif">1,892</span>
+                    <span id="visitor-total" class="text-xs font-bold text-yellow-300 font-serif">1</span>
                 </div>
             </section>
 
@@ -364,17 +364,17 @@
 
     <script>
         // ==========================================
-        // 1. PENGURUSAN STATISTIK PELAWAT
+        // 1. PENGURUSAN STATISTIK PELAWAT (DIRESET)
         // ==========================================
         function initVisitorCounter() {
-            const baseToday = 148;
-            const baseTotal = 1892;
+            const baseToday = 0;
+            const baseTotal = 0;
 
             const todayEl = document.getElementById('visitor-today');
             const totalEl = document.getElementById('visitor-total');
 
-            animateNumber(todayEl, 0, baseToday + 1, 900);
-            animateNumber(totalEl, 1500, baseTotal + 1, 1100);
+            animateNumber(todayEl, 0, baseToday + 1, 500);
+            animateNumber(totalEl, 0, baseTotal + 1, 500);
         }
 
         function animateNumber(element, start, end, duration) {
