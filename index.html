@@ -14,32 +14,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Cinzel"', 'serif'],
-                    },
-                    colors: {
-                        royal: {
-                            950: '#041029',
-                            900: '#071b42',
-                            800: '#0b2963',
-                        },
-                        gold: {
-                            300: '#fde047',
-                            400: '#facc15',
-                            500: '#eab308',
-                            600: '#ca8a04',
+        function applyTailwindConfig() {
+            if (typeof tailwind !== 'undefined') {
+                tailwind.config = {
+                    theme: {
+                        extend: {
+                            fontFamily: {
+                                sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                                serif: ['"Cinzel"', 'serif'],
+                            },
+                            colors: {
+                                royal: {
+                                    950: '#041029',
+                                    900: '#071b42',
+                                    800: '#0b2963',
+                                },
+                                gold: {
+                                    300: '#fde047',
+                                    400: '#facc15',
+                                    500: '#eab308',
+                                    600: '#ca8a04',
+                                }
+                            }
                         }
                     }
-                }
+                };
             }
         }
+        applyTailwindConfig();
+        window.addEventListener('load', applyTailwindConfig);
     </script>
 
     <style>
+        /* Takrifan Warna Sandaran untuk Tema Biru Diraja & Emas */
+        .bg-royal-950 { background-color: #041029; }
+        .bg-royal-900 { background-color: #071b42; }
+        .bg-royal-800 { background-color: #0b2963; }
+        .from-royal-950 { --tw-gradient-from: #041029; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(4, 16, 41, 0)); }
+        .from-royal-900 { --tw-gradient-from: #071b42; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 27, 66, 0)); }
+        .via-royal-800 { --tw-gradient-stops: var(--tw-gradient-from), #0b2963, var(--tw-gradient-to, rgba(11, 41, 99, 0)); }
+        .to-royal-950 { --tw-gradient-to: #041029; }
+        .text-royal-950 { color: #041029; }
+        .font-serif { font-family: 'Cinzel', serif; }
+        .font-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
+
         /* Gaya Khas untuk Tema Biru Diraja & Emas Mengikut latar.png */
         body {
             background-color: #041029;
@@ -379,7 +397,7 @@
         let menuTabs = [
             { id: 'tentatif', title: 'TENTATIF', subtitle: 'Atur Cara Rasmi Majlis', icon: 'fa-clock', url: '', isCustom: false },
             { id: 'buku_program', title: 'BUKU PROGRAM', subtitle: 'E-Buku Program & Jawatankuasa', icon: 'fa-book-open', url: '', isCustom: false },
-            { id: 'kehadiran', title: 'KEHADIRAN', subtitle: 'Pendaftaran Kehadiran Tetamu & Ibu Bapa', icon: 'fa-clipboard-user', url: '', isCustom: false },
+            { id: 'kehadiran', title: 'KEHADIRAN', subtitle: 'Pendaftaran Kehadiran Tetamu & Ibu Bapa', icon: 'fa-clipboard-user', url: 'https://skpkmiri.github.io/PIBG/', isCustom: false },
             { id: 'galeri', title: 'GALERI', subtitle: 'Album Majlis, Photobooth, Graduasi & Studio', icon: 'fa-images', url: '', isCustom: false },
             { id: 'slaid_anugerah', title: 'SLIDE PENERIMA ANUGERAH', subtitle: 'Kurikulum, HEM, Kokurikulum, PIBG & Tokoh', icon: 'fa-trophy', url: '', isCustom: false },
             { id: 'penghargaan', title: 'PENGHARGAAN', subtitle: 'Sekalung Budi & Terima Kasih', icon: 'fa-hand-holding-heart', url: '', isCustom: false }
@@ -388,11 +406,11 @@
         // Pautan khusus untuk item sub-menu Galeri & Slaid Penerima Anugerah
         let subMenuLinks = {
             // Galeri
-            album_majlis: { label: 'Galeri: 1. Album Majlis', url: '' },
-            album_photobooth: { label: 'Galeri: 2. Album Photobooth', url: '' },
-            album_graduasi_thn6: { label: 'Galeri: 3a. Album Graduasi (Tahun 6)', url: '' },
-            album_graduasi_pra: { label: 'Galeri: 3b. Album Graduasi (Prasekolah)', url: '' },
-            album_studio: { label: 'Galeri: 4. Album Studio', url: '' },
+            album_majlis: { label: 'Galeri: 1. Album Majlis', url: 'https://photos.app.goo.gl/U7qQUcQR8EcstJdd6' },
+            album_photobooth: { label: 'Galeri: 2. Album Photobooth', url: 'https://photos.app.goo.gl/x9YuQfUQ3AAQVzvS7' },
+            album_graduasi_thn6: { label: 'Galeri: 3a. Album Graduasi (Tahun 6)', url: 'https://photos.app.goo.gl/1vRoG9vxeGUvAaFc8' },
+            album_graduasi_pra: { label: 'Galeri: 3b. Album Graduasi (Prasekolah)', url: 'https://photos.app.goo.gl/5vUcoShk7XbTBjNP8' },
+            album_studio: { label: 'Galeri: 4. Album Studio', url: 'https://photos.app.goo.gl/Yo2iDwnTcYEw3NyW8' },
             // Slide Penerima Anugerah
             anugerah_kurikulum: { label: 'Slaid: 1. Anugerah Kurikulum', url: '' },
             anugerah_hem: { label: 'Slaid: 2. Anugerah Hal Ehwal Murid', url: '' },
