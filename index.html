@@ -175,15 +175,15 @@
 <body class="text-white antialiased selection:bg-yellow-400 selection:text-royal-950">
 
     <!-- Bingkai Utama Aplikasi -->
-    <main class="app-frame flex flex-col justify-between px-4 sm:px-6 pb-28">
+    <main class="app-frame flex flex-col justify-start px-4 sm:px-6 pb-32">
         
-        <!-- Ruang Kosong Atas untuk Memelihara Grafik Tajuk Poster (latar.png) -->
-        <div class="w-full pt-[56%] sm:pt-[58%] pointer-events-none select-none">
+        <!-- Ruang Kosong Atas untuk Memelihara Grafik Tajuk Poster (latar.png) - Dikecilkan supaya menu naik ke atas -->
+        <div class="w-full pt-[49%] sm:pt-[51%] pointer-events-none select-none">
             <!-- Header poster (Logo Sekolah, Tajuk Majlis, Tarikh Rabu 02.12.2026 & Lokasi) dipaparkan jelas di sini -->
         </div>
 
         <!-- Bahagian Interaktif Tengah: Statistik Pelawat & Butang Menu -->
-        <div class="w-full z-10 space-y-2.5 my-auto">
+        <div class="w-full z-10 space-y-2">
             
             <!-- 1. Kaunter Jumlah Pelawat (Saiz Dikecilkan & Padat) -->
             <section aria-label="Statistik Pelawat" class="visitor-glass rounded-full py-1.5 px-4 flex items-center justify-between max-w-xs mx-auto">
@@ -203,12 +203,12 @@
             </section>
 
             <!-- Senarai Butang Menu Utama (Dijana secara dinamik supaya Admin boleh susun atur & tambah menu) -->
-            <nav id="dynamic-menu-container" aria-label="Menu Utama Majlis" class="grid grid-cols-1 gap-2">
+            <nav id="dynamic-menu-container" aria-label="Menu Utama Majlis" class="grid grid-cols-1 gap-1.5">
                 <!-- Butang menu dirender oleh JavaScript -->
             </nav>
 
             <!-- Butang Akses Admin Halus di Bawah Menu -->
-            <div class="pt-1 flex justify-center">
+            <div class="pt-0.5 flex justify-center">
                 <button onclick="openAdminGate()" class="text-[10px] text-yellow-200/60 hover:text-yellow-300 bg-royal-950/70 hover:bg-royal-900 border border-yellow-400/25 px-3 py-1 rounded-full flex items-center space-x-1.5 transition backdrop-blur-sm">
                     <i class="fa-solid fa-gear text-[9px]"></i>
                     <span>Panel Admin</span>
