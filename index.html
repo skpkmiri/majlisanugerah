@@ -398,6 +398,7 @@
             { id: 'tentatif', title: 'TENTATIF', subtitle: 'Atur Cara Rasmi Majlis', icon: 'fa-clock', url: '', isCustom: false },
             { id: 'buku_program', title: 'BUKU PROGRAM', subtitle: 'E-Buku Program & Jawatankuasa', icon: 'fa-book-open', url: '', isCustom: false },
             { id: 'kehadiran', title: 'KEHADIRAN', subtitle: 'Pendaftaran Kehadiran Tetamu & Ibu Bapa', icon: 'fa-clipboard-user', url: 'https://skpkmiri.github.io/PIBG/', isCustom: false },
+            { id: 'frame_majlis', title: 'FRAME MAJLIS', subtitle: 'Bingkai Foto Digital Twibbon Majlis', icon: 'fa-camera', url: 'https://twb.nz/majlis-apc-sekolah', isCustom: false },
             { id: 'galeri', title: 'GALERI', subtitle: 'Album Majlis, Photobooth, Graduasi & Studio', icon: 'fa-images', url: '', isCustom: false },
             { id: 'slaid_anugerah', title: 'SLIDE PENERIMA ANUGERAH', subtitle: 'Kurikulum, HEM, Kokurikulum, PIBG & Tokoh', icon: 'fa-trophy', url: '', isCustom: false },
             { id: 'penghargaan', title: 'PENGHARGAAN', subtitle: 'Sekalung Budi & Terima Kasih', icon: 'fa-hand-holding-heart', url: '', isCustom: false }
@@ -569,6 +570,32 @@
                                         <span>Pn. Siti Aminah (Ibu Bapa)</span>
                                         <span class="text-yellow-400">Hadir</span>
                                     </div>
+                                </div>
+                            </div>
+                        `
+                    };
+
+                case 'frame_majlis':
+                    return {
+                        title: 'FRAME MAJLIS (TWIBBON)',
+                        subtitle: 'Bingkai Foto Digital Rasmi Majlis 2026',
+                        icon: tab.icon,
+                        html: `
+                            ${externalLinkBanner(tab.url, 'Buka Frame Majlis')}
+                            <div class="bg-royal-800/60 border border-yellow-400/40 rounded-xl p-5 text-center space-y-3">
+                                <div class="w-14 h-14 mx-auto rounded-full icon-badge flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-camera"></i>
+                                </div>
+                                <h3 class="font-serif font-bold text-yellow-300 text-base">BINGKAI FOTO KENANGAN MAJLIS</h3>
+                                <p class="text-xs text-blue-100/90 leading-relaxed">
+                                    Abadikan kenangan istimewa anda bersama bingkai foto rasmi <strong>Majlis Anugerah Kecemerlangan & Graduasi SK Pendidikan Khas Miri 2026</strong>! Muat naik gambar anda dan kongsikan bersama keluarga.
+                                </p>
+                                <div class="pt-2">
+                                    <a href="${tab.url || 'https://twb.nz/majlis-apc-sekolah'}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-yellow-400 hover:bg-yellow-300 text-royal-950 font-bold text-xs px-5 py-2.5 rounded-xl shadow transition">
+                                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                        <span>Gunakan Frame Majlis Sekarang</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                    </a>
                                 </div>
                             </div>
                         `
